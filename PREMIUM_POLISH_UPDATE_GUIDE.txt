@@ -1,0 +1,40 @@
+SAIL Research Solutions - Premium Polish Update
+
+Changes completed:
+1. Homepage
+- Premium hero section added.
+- Improved heading and tagline.
+- Stronger CTA buttons added.
+- Smoother background/video treatment added.
+- Service panel and assurance row added.
+- Premium service cards, process section and CTA added.
+
+2. Navigation
+- Submit Requirement remains as highlighted button.
+- FAQ added to top menu.
+- Logo size and spacing adjusted.
+- Logo links to homepage through index.html.
+
+3. Services Page
+- More attractive service-wise cards added.
+- Detailed bullet points added for each service.
+- “Who can use this service?” section added.
+- Pricing enquiry note added without displaying prices.
+
+4. Submit Requirement Page
+- Text above Tally form improved.
+- Attachment instruction added.
+- Confidentiality note added.
+- Expected response time added as 7 working days.
+- Tally form ID remains connected: 44Opdo.
+
+5. Contact Page
+- Contact layout made more elegant.
+- Direct email button added.
+- Google Map placement improved.
+- Submit Requirement button retained.
+
+Upload folder to Netlify:
+sail_research_solutions_modern_topnav
+
+Make sure index.html is directly inside the uploaded folder.

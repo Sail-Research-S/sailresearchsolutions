@@ -1,0 +1,42 @@
+SAIL Research Solutions - Modern Top Navigation Layout
+
+What was changed:
+- Sidebar layout removed.
+- Modern sticky top-navigation layout added.
+- Homepage redesigned with a stronger hero section, service panel, quick trust strip, service cards, process section and CTA.
+- Your logo is retained.
+- Contact number is not displayed.
+- Google Map contact page is retained.
+- Homepage background video is included if available.
+
+How to preview:
+1. Unzip the package.
+2. Open index.html in your browser.
+3. Check all pages using the top menu.
+
+How to upload to Netlify:
+1. Upload the unzipped folder: sail_research_solutions_modern_topnav
+2. Make sure index.html is directly inside the folder.
+3. Deploy in Netlify.
+
+How to edit:
+- Homepage: index.html
+- Design: assets/style.css
+- Mobile menu: assets/script.js
+- Logo: assets/logo.png
+- Background video: assets/sail_homepage_background_60sec.mp4
+
+
+Latest Update:
+- Enquiry form removed from contact.html.
+- New dedicated form page added: submit-requirement.html.
+- All Submit Requirement buttons now open submit-requirement.html.
+- Contact page now contains contact details, note, service button, and Google Map only.
+
+
+Latest Update:
+- Static email-app form removed from submit-requirement.html.
+- Submit Requirement page now uses Tally embed-ready structure.
+- Attachment upload will be handled inside Tally after your Tally form ID is added.
+- New setup file added: TALLY_FORM_SETUP_GUIDE.txt.
+- Configuration file added: assets/tally-loader.js.

@@ -1,0 +1,63 @@
+SAIL Research Solutions - Tally Form Setup Guide
+
+Purpose:
+The Submit Requirement page is now prepared for an embedded Tally form with attachment upload.
+
+Step 1: Create a Tally form
+Create a form in Tally with these fields:
+1. Name
+2. Email address
+3. Service required
+4. Subject area
+5. Current stage of work
+6. Expected deadline
+7. Requirement details
+8. File upload / attachment
+9. Consent checkbox or acknowledgement
+
+Suggested service options:
+- Research Proposal / Synopsis
+- Thesis / Dissertation Support
+- Manuscript Writing / Editing
+- Statistical Interpretation
+- Publication Support
+- Presentation / Poster Support
+- Institutional / Workshop Support
+
+Suggested attachment instruction:
+Please upload only relevant academic or research-related documents, such as thesis drafts, manuscripts, data sheets, journal guidelines, reviewer comments, or supporting files.
+
+Step 2: Get the Tally form ID
+Example public form link:
+https://tally.so/r/abc123
+
+The form ID is:
+abc123
+
+Step 3: Insert the form ID into the website
+Open:
+assets/tally-loader.js
+
+Find:
+const SAIL_TALLY_FORM_ID = "YOUR_TALLY_FORM_ID";
+
+Replace it with:
+const SAIL_TALLY_FORM_ID = "abc123";
+
+Step 4: Save and upload to Netlify
+Upload the edited website folder to Netlify.
+
+Result:
+The Submit Requirement page will display the embedded Tally form directly on your website.
+
+Important:
+Do not use the old static email form.
+Do not rename submit-requirement.html.
+Do not delete assets/tally-loader.js.
+
+
+Current Tally Form Connected:
+Form link: https://tally.so/embed/44Opdo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1
+Form ID: 44Opdo
+
+The website is now configured to load this Tally form in submit-requirement.html.

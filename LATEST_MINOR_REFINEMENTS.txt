@@ -1,0 +1,12 @@
+Latest Minor Refinements
+
+Completed:
+1. Removed "Location: Gobi, Tamil Nadu, India" from the website header only.
+2. Kept location details in Contact page and footer.
+3. Added Spectral font across the website using Google Fonts with Georgia fallback.
+4. Redesigned the About Us visual content block into a purple-lavender themed Research Integrity card.
+
+Updated files:
+- All HTML pages
+- about.html
+- assets/style.css

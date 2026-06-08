@@ -1,0 +1,45 @@
+SAIL Research Solutions - Netlify Editing Guide
+
+1. How to change the logo
+- Open the folder: assets
+- Replace the file named logo.png with your own logo.
+- Keep the same file name exactly: logo.png
+- Recommended logo size: square PNG, 600 x 600 px or 1000 x 1000 px.
+- After replacing the logo, open index.html in your browser and check the result.
+
+2. How to edit homepage text
+- Open index.html using TextEdit, VS Code, Sublime Text, or any code editor.
+- Search for the text you want to replace.
+- Save the file.
+
+3. How to edit contact details
+- Open all HTML files and replace:
+  info@sailresearchsolutions.com
+  +91 XXXXX XXXXX
+- Main contact page file: contact.html
+- Footer contact details are present in each HTML file because this is a static website.
+
+4. How to upload to Netlify
+- Do not upload this ZIP directly if Netlify asks for a folder.
+- Unzip the package.
+- Upload/drag the folder named sail_research_solutions_netlify_editable.
+- The folder must directly contain index.html.
+
+5. How to update the website after editing
+- Edit the files on your computer.
+- Re-upload the updated folder to the same Netlify site through Deploys.
+- Netlify will create a new deploy and update the live site.
+
+6. Important
+- Do not rename index.html.
+- Do not delete the assets folder.
+- Do not remove style.css or script.js.
+
+
+Latest Update
+- Your uploaded company logo has been inserted as assets/logo.png.
+- Contact number display has been removed from the website.
+- Google Map location has been added to contact.html using Gobi, Tamil Nadu, India.
+- To change map location later, open contact.html and search for:
+  https://www.google.com/maps?q=Gobi,%20Tamil%20Nadu,%20India&output=embed
+  Replace the location query with your exact business location.
