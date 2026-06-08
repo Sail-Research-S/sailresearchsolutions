@@ -1907,3 +1907,26 @@ h1,h2,h3,h4,h5,h6,
   }
 }
 
+
+
+/* Clickable email link refinement */
+.email-link{
+  color:inherit;
+  font-weight:800;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+.topbar .email-link,
+.footer .email-link{
+  color:inherit;
+}
+
+.contact-detail-list .email-link,
+.content-box .email-link{
+  color:var(--premium-purple, #5b1856);
+}
+
+.email-link:hover{
+  opacity:.82;
+}

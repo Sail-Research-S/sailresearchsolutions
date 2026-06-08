@@ -1,0 +1,12 @@
+Email Link Fix
+
+Completed:
+- Header, footer, contact, and content-page email displays are configured as clickable mailto links.
+- The mailto link includes the default subject:
+  Website Enquiry - SAIL Research Solutions
+
+Important:
+A mailto link opens only if the visitor's browser/system has a default email handler configured, such as Gmail, Outlook, Apple Mail, or another email client.
+
+Best practice:
+Keep both the direct email link and the Submit Requirement Tally form, because the form works even when the visitor's email app is not configured.
