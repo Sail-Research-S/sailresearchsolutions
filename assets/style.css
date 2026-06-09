@@ -1930,3 +1930,72 @@ h1,h2,h3,h4,h5,h6,
 .email-link:hover{
   opacity:.82;
 }
+
+
+/* Mobile navigation fix */
+@media (max-width: 900px){
+  .site-header,
+  .navbar,
+  header{
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+  }
+
+  .nav-toggle,
+  .menu-toggle,
+  .hamburger,
+  button[aria-label*="menu" i],
+  button[aria-label*="navigation" i]{
+    position: relative !important;
+    z-index: 10001 !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  body.mobile-menu-open{
+    overflow: hidden !important;
+  }
+
+  body.mobile-menu-open .nav-links,
+  .nav-links.open,
+  .nav-links.active,
+  .primary-nav.open,
+  .primary-nav.active,
+  .menu.open,
+  .menu.active,
+  .main-nav.open,
+  .main-nav.active{
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+    max-height: calc(100vh - 76px) !important;
+    overflow-y: auto !important;
+  }
+
+  body.mobile-menu-open .nav-links{
+    position: fixed !important;
+    top: 64px !important;
+    left: 12px !important;
+    right: 12px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    padding: 16px !important;
+    border-radius: 22px !important;
+    background: rgba(255,255,255,.98) !important;
+    box-shadow: 0 24px 60px rgba(43, 12, 51, .24) !important;
+    border: 1px solid rgba(91, 24, 86, .14) !important;
+    z-index: 10000 !important;
+  }
+
+  body.mobile-menu-open .nav-links a{
+    display: block !important;
+    width: 100% !important;
+    padding: 12px 14px !important;
+    border-radius: 14px !important;
+  }
+}
