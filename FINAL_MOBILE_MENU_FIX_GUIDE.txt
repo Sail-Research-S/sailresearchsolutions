@@ -1,0 +1,16 @@
+Final Mobile Menu Fix
+
+This version does not depend only on the old hidden menu.
+It creates a separate mobile overlay menu from the existing navigation links.
+This should work even if the previous CSS menu is blocked.
+
+Important upload:
+- Upload/replace assets/style.css
+- Upload/replace assets/script.js
+- Upload all HTML files because script references include a cache-busting version number.
+
+After upload:
+- Commit changes.
+- Wait 5 minutes.
+- Clear mobile browser cache or test in incognito/private mode.
+- Open https://www.sailresearchsolutions.com/?v=mobilefix2
