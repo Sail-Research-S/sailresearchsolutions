@@ -1,0 +1,13 @@
+Mobile Menu Fix
+
+Issue fixed:
+- The mobile three-line menu button was not opening reliably.
+- Added CSS and JavaScript to make the mobile menu open as a fixed dropdown.
+- Menu closes after selecting a page, tapping outside, pressing Escape, or resizing to desktop.
+
+Upload:
+1. Unzip this package.
+2. Upload all extracted files and folders to GitHub.
+3. Commit changes with message: Fix mobile navigation menu.
+4. Wait 2 to 5 minutes.
+5. Test on mobile in incognito/private browser.
