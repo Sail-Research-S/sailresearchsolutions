@@ -1,0 +1,22 @@
+Only Tally Form Link Updated
+
+This package keeps the old Submit Requirement page layout/design.
+Only the Tally form link has been changed.
+
+New public form:
+https://tally.so/r/obz8vX
+
+New embedded form:
+https://tally.so/embed/obz8vX?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1
+
+Old form ID replaced:
+44Opdo -> obz8vX
+
+Upload instructions:
+1. Unzip this package.
+2. Upload all extracted files and folders to GitHub.
+3. Commit changes with message:
+   Update Tally form link only
+4. Wait 2 to 5 minutes.
+5. Test:
+   https://www.sailresearchsolutions.com/submit-requirement.html?v=formonly
