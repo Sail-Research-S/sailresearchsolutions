@@ -1,34 +1,14 @@
-SAIL Research Solutions Website Package
+SAIL Research Solutions - Dark Homepage Prototype (No Final Logo)
 
-Included files:
+Files included:
 - index.html
-- about.html
-- services.html
-- publication-support.html
-- policies.html
-- contact.html
-- faq.html
-- assets/style.css
-- assets/script.js
-- squarespace_homepage_content.txt
+- assets/css/style.css
+- assets/js/main.js
+- assets/images/favicon.svg
 
-How to preview:
-1. Open index.html in any browser.
-2. Check every page using the top menu.
-
-Before uploading:
-1. Replace info@sailresearchsolutions.com with your actual business email.
-2. Replace +91 XXXXX XXXXX with your official phone/WhatsApp number.
-3. Review policies with a legal/business advisor if needed.
-4. Add real testimonials only after client permission.
-5. Add actual logo, images and domain-specific contact form integration if required.
-
-Squarespace use:
-- You can copy the content from squarespace_homepage_content.txt into Squarespace sections.
-- The static HTML package is best for normal web hosting, cPanel, Netlify, Vercel, GitHub Pages or similar static hosting.
-
-
-Updated Package Notes
-- Company logo inserted.
-- Website contact number removed.
-- Google Map embedded in Contact page.
+Notes:
+1. The current header/footer uses a temporary text-based "S" mark.
+2. When the final logo is ready, replace the temporary brand mark with your logo image.
+3. No contact number is displayed. Only the email is included.
+4. The layout is responsive for desktop and mobile.
+5. Upload the folder contents to your hosting root to preview.
