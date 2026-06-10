@@ -1,0 +1,12 @@
+Restored Old Footer With Logo
+
+Changes made:
+- Restored the old dark purple footer layout.
+- Added logo in the first footer column.
+- Added tagline: Scientific Advancement. Impactful Legacy.
+- Kept contact number hidden.
+- Kept email, website, location, quick links and policies.
+
+Upload all extracted files and folders to GitHub.
+Suggested commit message:
+Restore old footer with logo and tagline

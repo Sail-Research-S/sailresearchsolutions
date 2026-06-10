@@ -1,11 +1,11 @@
-SAIL Research Solutions Homepage Content for Squarespace
+SAIL Research Solution Homepage Content for Squarespace
 
 Hero Section
 Heading:
 Advancing Research with Clarity, Quality and Integrity
 
 Subheading:
-SAIL Research Solutions supports students, research scholars, faculty members, healthcare professionals and institutions in planning, writing, refining and presenting academic research documents through structured and ethical guidance.
+SAIL Research Solution supports students, research scholars, faculty members, healthcare professionals and institutions in planning, writing, refining and presenting academic research documents through structured and ethical guidance.
 
 Buttons:
 Get Research Support
@@ -17,7 +17,7 @@ Heading:
 Your Research, Our Structured Guidance
 
 Text:
-Research success requires a clear objective, suitable methodology, accurate reporting, ethical compliance and professional presentation. SAIL Research Solutions helps researchers improve these essential elements without compromising academic integrity.
+Research success requires a clear objective, suitable methodology, accurate reporting, ethical compliance and professional presentation. SAIL Research Solution helps researchers improve these essential elements without compromising academic integrity.
 
 Core Services
 1. Research Proposal and Synopsis Support
@@ -58,7 +58,7 @@ Step 5: Final Delivery
 The completed file is delivered for academic review, institutional submission or journal preparation.
 
 Ethics Statement
-At SAIL Research Solutions, we do not promote fabricated data, false authorship, guaranteed publication claims, unethical similarity reduction or misuse of institutional resources. Our role is to provide academic guidance, editing, formatting, documentation support, statistical interpretation and publication readiness assistance.
+At SAIL Research Solution, we do not promote fabricated data, false authorship, guaranteed publication claims, unethical similarity reduction or misuse of institutional resources. Our role is to provide academic guidance, editing, formatting, documentation support, statistical interpretation and publication readiness assistance.
 
 Footer Disclaimer
-SAIL Research Solutions provides academic research guidance, editing, formatting, statistical interpretation and publication support services. We do not guarantee journal acceptance, publication, indexing, ethical approval, authorship eligibility, academic marks, degree completion or research outcomes. All research data, ethical permissions, institutional approvals, authorship responsibility and final submissions remain the responsibility of the respective authors, investigators, students or institutions.
+SAIL Research Solution provides academic research guidance, editing, formatting, statistical interpretation and publication support services. We do not guarantee journal acceptance, publication, indexing, ethical approval, authorship eligibility, academic marks, degree completion or research outcomes. All research data, ethical permissions, institutional approvals, authorship responsibility and final submissions remain the responsibility of the respective authors, investigators, students or institutions.

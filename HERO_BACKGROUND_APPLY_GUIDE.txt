@@ -1,0 +1,15 @@
+Hero Background Apply Update
+
+Updated:
+- Extracted the ship and ocean image from the sample.
+- Applied it as the full hero section background.
+- Removed the separate ship/ocean image block.
+- Retained the rest of the website and previous fixes.
+
+Upload:
+1. Unzip this package.
+2. Upload all extracted files and folders to GitHub.
+3. Commit changes:
+   Apply ship ocean image as hero background
+4. Test:
+   https://www.sailresearchsolutions.com/?v=herobgapply

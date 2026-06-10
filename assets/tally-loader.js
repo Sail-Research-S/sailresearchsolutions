@@ -1,6 +1,6 @@
 
 /*
-SAIL Research Solutions - Tally Form Loader
+SAIL Research Solution - Tally Form Loader
 
 How to activate:
 1. Create your Tally form.
@@ -30,7 +30,7 @@ const SAIL_TALLY_FORM_ID = "obz8vX";
   iframe.setAttribute("frameborder", "0");
   iframe.setAttribute("marginheight", "0");
   iframe.setAttribute("marginwidth", "0");
-  iframe.setAttribute("title", "SAIL Research Solutions Requirement Form");
+  iframe.setAttribute("title", "SAIL Research Solution Requirement Form");
   iframe.className = "tally-iframe";
 
   mount.innerHTML = "";

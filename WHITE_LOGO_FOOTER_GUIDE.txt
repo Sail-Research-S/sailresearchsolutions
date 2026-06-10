@@ -1,0 +1,9 @@
+White Logo Footer Update
+
+Changes made:
+- Changed the footer logo appearance from black to white.
+- Transparent logo style is retained.
+- Other website content remains unchanged.
+
+Suggested commit message:
+Change footer logo to white

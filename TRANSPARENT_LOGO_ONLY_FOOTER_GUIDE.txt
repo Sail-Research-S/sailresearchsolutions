@@ -1,0 +1,10 @@
+Updated footer version
+
+Changes made:
+- Removed the added tagline/logo block style.
+- Restored the old footer layout.
+- Kept only a transparent logo in the first footer column.
+- No contact number displayed.
+
+Suggested commit message:
+Update footer with transparent logo only

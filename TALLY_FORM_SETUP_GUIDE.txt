@@ -1,4 +1,4 @@
-SAIL Research Solutions - Tally Form Setup Guide
+SAIL Research Solution - Tally Form Setup Guide
 
 Purpose:
 The Submit Requirement page is now prepared for an embedded Tally form with attachment upload.

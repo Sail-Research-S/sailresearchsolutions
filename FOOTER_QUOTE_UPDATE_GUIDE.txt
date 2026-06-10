@@ -1,0 +1,9 @@
+Footer quote update
+
+Changes made:
+- Footer title kept as SAIL Research Solution
+- Tagline changed to: Scientific Advancement. Impactful Legacy.
+- Removed repeated navigation links (About Us, Services, etc.) from the footer middle section
+- Footer background adjusted back to the softer old planned theme
+
+Upload all files and folders to GitHub and commit the changes.

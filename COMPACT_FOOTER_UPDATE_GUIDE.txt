@@ -1,0 +1,13 @@
+Compact Footer Update
+
+Changes made:
+- Reduced footer height/length.
+- Removed large logo block spacing.
+- Kept SAIL Research Solution case style.
+- Kept quote: Scientific Advancement. Impactful Legacy.
+- Kept email and website.
+- Contact number is not displayed.
+
+Upload extracted files and folders to GitHub.
+Suggested commit message:
+Reduce footer height

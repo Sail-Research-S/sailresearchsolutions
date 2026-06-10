@@ -1,0 +1,12 @@
+Brand Case Style Update
+
+Updated visible brand name to:
+SAIL Research Solution
+
+Note:
+- Website domain and email were not changed.
+- This update changes visible text only.
+
+Upload all extracted files and folders to GitHub.
+Suggested commit message:
+Update brand case style

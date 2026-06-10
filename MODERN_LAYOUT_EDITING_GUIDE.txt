@@ -1,4 +1,4 @@
-SAIL Research Solutions - Modern Top Navigation Layout
+SAIL Research Solution - Modern Top Navigation Layout
 
 What was changed:
 - Sidebar layout removed.

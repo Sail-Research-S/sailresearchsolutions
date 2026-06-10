@@ -1,0 +1,15 @@
+Hero and Footer Refinement
+
+Updated:
+- Homepage first hero section refined in sail-based research direction.
+- Existing website theme preserved.
+- Footer redesigned with centered logo, navigation links, email and website.
+- Contact number is not displayed.
+
+Upload:
+1. Unzip this package.
+2. Upload all extracted files and folders to GitHub.
+3. Commit changes:
+   Update hero section and footer
+4. Test:
+   https://www.sailresearchsolutions.com/?v=herofooter

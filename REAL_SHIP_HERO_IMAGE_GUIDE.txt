@@ -1,0 +1,14 @@
+Real Ship and Ocean Hero Update
+
+Updated:
+- The homepage hero section now uses the actual ship-and-ocean image cropped from the provided sample.
+- Existing website theme is preserved.
+- Footer and other earlier fixes are retained.
+
+Upload:
+1. Unzip this package.
+2. Upload all extracted files and folders to GitHub.
+3. Commit changes:
+   Use real ship ocean image in hero
+4. Test:
+   https://www.sailresearchsolutions.com/?v=realshiphero

@@ -1,4 +1,4 @@
-SAIL Research Solutions - Netlify Editing Guide
+SAIL Research Solution - Netlify Editing Guide
 
 1. How to change the logo
 - Open the folder: assets

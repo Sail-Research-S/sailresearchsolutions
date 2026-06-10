@@ -1,0 +1,17 @@
+Purple-Gold Ship Hero Refinement
+
+Corrected based on feedback:
+- Removed dominant blue direction.
+- Restored purple/gold premium theme.
+- Added actual ocean and sailing ship visual using a local SVG asset.
+- Kept only first hero section and footer refined.
+- Contact number is not displayed.
+- Existing Tally form and pages are retained.
+
+Upload:
+1. Unzip this package.
+2. Upload all extracted files and folders to GitHub.
+3. Commit changes:
+   Update purple gold ship hero and footer
+4. Test:
+   https://www.sailresearchsolutions.com/?v=purplegoldship

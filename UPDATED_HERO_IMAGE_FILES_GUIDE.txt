@@ -1,0 +1,13 @@
+Updated Website Files with Generated Hero Background
+
+This package includes the website files updated with the newly generated hero background image.
+
+Updated file:
+- assets/hero-background-ship-ocean.png
+
+Also included:
+- assets/hero-background-generated-yacht.png
+
+Upload all extracted files and folders to GitHub, then commit the changes.
+Suggested commit message:
+Update homepage hero background image

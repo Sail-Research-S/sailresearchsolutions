@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf3"/>
+      <stop offset="0.42" stop-color="#f6edf8"/>
+      <stop offset="1" stop-color="#efe0f3"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f1554"/>
+      <stop offset="0.46" stop-color="#6f2a5f"/>
+      <stop offset="1" stop-color="#c79a42"/>
+    </linearGradient>
+    <linearGradient id="sail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.52" stop-color="#f1e3f2"/>
+      <stop offset="1" stop-color="#d7b66a"/>
+    </linearGradient>
+    <linearGradient id="sailDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#faf4ff"/>
+      <stop offset="1" stop-color="#b78c3d"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff6d8"/>
+      <stop offset="0.55" stop-color="#e1b45c"/>
+      <stop offset="1" stop-color="#e1b45c" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#3d123d" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1260" cy="210" r="180" fill="url(#sun)" opacity="0.72"/>
+
+  <path d="M0 565 C160 540 270 590 430 560 C610 526 720 592 900 560 C1090 523 1220 590 1600 540 L1600 900 L0 900Z" fill="url(#sea)" opacity="0.94"/>
+  <path d="M0 646 C130 620 270 670 420 642 C610 608 720 674 900 642 C1090 606 1230 670 1600 620" fill="none" stroke="#f3d17d" stroke-width="6" opacity="0.48"/>
+  <path d="M0 720 C170 690 310 750 510 712 C690 680 870 748 1060 710 C1250 674 1400 740 1600 700" fill="none" stroke="#fff6d8" stroke-width="4" opacity="0.28"/>
+  <path d="M0 792 C150 764 300 826 480 790 C660 754 860 820 1040 786 C1220 752 1410 812 1600 780" fill="none" stroke="#f3d17d" stroke-width="3" opacity="0.22"/>
+
+  <g filter="url(#softShadow)" transform="translate(930 300)">
+    <line x1="148" y1="0" x2="148" y2="330" stroke="#3c123e" stroke-width="8" stroke-linecap="round"/>
+    <path d="M158 12 C244 90 320 198 386 315 L158 315 Z" fill="url(#sail)"/>
+    <path d="M138 64 C76 142 44 228 24 315 L138 315 Z" fill="url(#sailDark)"/>
+    <path d="M20 338 C118 365 260 364 400 338 C366 390 282 415 142 407 C70 402 32 376 20 338Z" fill="#3c123e"/>
+    <path d="M35 342 C128 363 260 360 385 340" fill="none" stroke="#f4d27b" stroke-width="5" opacity="0.82"/>
+    <path d="M16 426 C96 404 176 448 260 424 C342 402 418 438 470 422" fill="none" stroke="#fff8dd" stroke-width="8" opacity=".72"/>
+  </g>
+
+  <path d="M0 0 H1600 V900 H0Z" fill="url(#sky)" opacity="0.02"/>
+</svg>
