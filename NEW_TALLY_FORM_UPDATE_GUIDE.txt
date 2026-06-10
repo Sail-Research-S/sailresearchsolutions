@@ -1,0 +1,21 @@
+New Tally Form Updated
+
+New Tally public form:
+https://tally.so/r/obz8vX
+
+New embedded form:
+https://tally.so/embed/obz8vX?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1
+
+The old Tally form has been replaced with the new form ID:
+obz8vX
+
+Upload instructions:
+1. Unzip this package.
+2. Upload all extracted files and folders to GitHub.
+3. Commit changes with message:
+   Replace Tally form with new requirement form
+4. Wait 2 to 5 minutes.
+5. Test:
+   https://www.sailresearchsolutions.com/submit-requirement.html?v=newform
+
+If the old form appears, open in incognito/private mode or add ?v=newform to the URL.

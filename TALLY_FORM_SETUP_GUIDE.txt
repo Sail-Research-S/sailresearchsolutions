@@ -29,7 +29,7 @@ Please upload only relevant academic or research-related documents, such as thes
 
 Step 2: Get the Tally form ID
 Example public form link:
-https://tally.so/r/abc123
+https://tally.so/r/obz8vX
 
 The form ID is:
 abc123
@@ -57,7 +57,7 @@ Do not delete assets/tally-loader.js.
 
 
 Current Tally Form Connected:
-Form link: https://tally.so/embed/44Opdo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1
-Form ID: 44Opdo
+Form link: https://tally.so/embed/obz8vX?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1
+Form ID: obz8vX
 
 The website is now configured to load this Tally form in submit-requirement.html.

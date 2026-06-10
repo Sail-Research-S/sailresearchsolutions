@@ -5,12 +5,12 @@ SAIL Research Solutions - Tally Form Loader
 How to activate:
 1. Create your Tally form.
 2. Copy only the Tally form ID from the form link.
-   Example: https://tally.so/r/abc123
+   Example: https://tally.so/r/obz8vX
    Form ID: abc123
 3. Replace YOUR_TALLY_FORM_ID below with your actual form ID.
 */
 
-const SAIL_TALLY_FORM_ID = "44Opdo";
+const SAIL_TALLY_FORM_ID = "obz8vX";
 
 (function(){
   const mount = document.getElementById("tally-form-mount");
