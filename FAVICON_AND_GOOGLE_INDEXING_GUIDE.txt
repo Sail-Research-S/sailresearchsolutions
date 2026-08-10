@@ -1,0 +1,32 @@
+Favicon and Google Indexing Support Added
+
+Added favicon files:
+- assets/favicon.ico
+- assets/favicon.png
+- assets/favicon-16x16.png
+- assets/favicon-32x32.png
+- assets/apple-touch-icon.png
+- assets/android-chrome-192x192.png
+- assets/android-chrome-512x512.png
+- site.webmanifest
+
+Added indexing support files:
+- robots.txt
+- sitemap.xml
+
+Added to HTML pages:
+- favicon link tags
+- canonical URL tags
+
+After uploading to GitHub, test:
+- https://www.sailresearchsolutions.com/assets/favicon.ico
+- https://www.sailresearchsolutions.com/robots.txt
+- https://www.sailresearchsolutions.com/sitemap.xml
+
+Google Search Console steps:
+1. Open Google Search Console.
+2. Add property: https://www.sailresearchsolutions.com/
+3. Verify ownership using DNS TXT record or HTML file method.
+4. Submit sitemap: sitemap.xml
+5. Use URL Inspection for https://www.sailresearchsolutions.com/
+6. Click Request Indexing.
