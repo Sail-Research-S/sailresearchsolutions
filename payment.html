@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Contact SAIL Research Solutions for research and scientific support enquiries.">
-  <title>Contact | SAIL Research Solutions</title>
+  <meta name="description" content="Secure payment page for SAIL Research Solutions using Razorpay and UPI.">
+  <title>Payment | SAIL Research Solutions</title>
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -75,61 +75,10 @@
     </div>
     <div class="nav-actions"><a class="btn btn-outline" href="payment.html"><span class="btn-ico" aria-hidden="true">💳</span>Make Payment</a><a class="btn btn-primary" href="submit.html"><span class="btn-ico" aria-hidden="true">📨</span>Submit Requirement</a></div>
   </div>
-</nav><main>
-<section class="contact-final-hero matched-contact-hero">
-  <div class="container matched-contact-hero-grid">
-    <div class="matched-contact-copy">
-      <span class="eyebrow">Contact Us</span>
-      <h1>We’re Here to Support Your Research Journey.</h1>
-      <p>Have a research requirement or need professional guidance? SAIL supports faculty members, research scholars, healthcare professionals, postgraduate learners and institutions across research planning, scientific writing, statistics and publication readiness.</p>
-      <div class="contact-trust-row matched-trust-row">
-        <div class="contact-trust"><span class="contact-trust-icon">🎧</span><div><strong>Quick Response</strong><small>Within 1–2 working days</small></div></div>
-        <div class="contact-trust"><span class="contact-trust-icon">🛡️</span><div><strong>Confidential &amp; Secure</strong><small>Your information is safe with us</small></div></div>
-        <div class="contact-trust"><span class="contact-trust-icon">👥</span><div><strong>Research-Focused Support</strong><small>Expert guidance at every step</small></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="contact-action-section">
-  <div class="container contact-action-grid">
-    <div class="contact-action-card">
-      <span class="eyebrow">Research Enquiry</span>
-      <h2>Send Us Your Requirement</h2>
-      <p>Choose the most convenient way to share your research or academic requirement. Use the structured requirement form for detailed submissions and file uploads, or contact us directly by email for general discussion.</p>
-      <div class="contact-action-buttons">
-        <a class="btn btn-primary" href="submit.html">📨 Submit Requirement</a>
-        <a class="btn btn-outline email-link" href="mailto:info@sailresearchsolutions.com?subject=Research%20Requirement%20-%20SAIL%20Research%20Solutions" title="Email SAIL Research Solutions">✉️ Email Directly</a>
-      </div>
-      <div class="contact-mini-note"><strong>Email:</strong> info@sailresearchsolutions.com &nbsp;•&nbsp; We usually respond within 1–2 working days.</div>
-    </div>
-
-    <div class="contact-action-card contact-touch-card">
-      <span class="eyebrow">Contact Details</span>
-      <h2>Get in Touch</h2>
-      <div class="contact-detail-grid">
-        <div class="contact-detail-item"><span>✉️</span><div><strong>General Enquiries</strong><a class="email-link" href="mailto:info@sailresearchsolutions.com?subject=General%20Enquiry%20-%20SAIL%20Research%20Solutions" title="Email SAIL Research Solutions">info@sailresearchsolutions.com</a></div></div>
-        <div class="contact-detail-item"><span>📍</span><div><strong>Location</strong><p>FC4P+2QP, SH 15, Gobichettipalayam, Tamil Nadu 638476</p></div></div>
-        <div class="contact-detail-item"><span>📨</span><div><strong>Research Requirements</strong><p>Use the structured Submit Requirement form for projects, methodology, analysis, writing and publication support.</p></div></div>
-        <div class="contact-detail-item"><span>💳</span><div><strong>Payment Support</strong><p>Use the secure payment page only after receiving the approved amount or quotation.</p><a href="payment.html">Go to Payment →</a></div></div>
-        <div class="contact-detail-item"><span>🕘</span><div><strong>Working Hours</strong><p>Monday to Saturday<br>9:00 AM to 6:00 PM</p></div></div>
-        <div class="contact-detail-item"><span>➤</span><div><strong>Expected Response</strong><p>We usually respond within 1–2 working days.</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="contact-map-full">
-  <div class="container">
-    <div class="contact-map-title-row">
-      <div><span class="eyebrow">Our Location</span><h2>Find SAIL Research Solutions</h2></div>
-    </div>
-    <div class="contact-map-frame">
-      <iframe src="https://www.google.com/maps?q=FC4P%2B2QP%2C%20SH%2015%2C%20Gobichettipalayam%2C%20Tamil%20Nadu%20638476&output=embed" width="100%" height="470" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="SAIL Research Solutions location"></iframe>
-    </div>
-  </div>
-</section>
-</main>
+</nav><main><section class="page-hero payment-page-hero"><div class="container"><span class="pill">Secure Payment</span><h1>Secure Payment to SAIL Research Solutions</h1><p>Use this page only after receiving your SAIL reference ID, quotation or approved payable amount from SAIL Research Solutions.</p></div></section><section><div class="container"><div class="payment-shell"><div class="payment-panel"><h2>Pay Online</h2><div class="gateway-badge"><div><strong>Razorpay Secure Checkout</strong><div style="color:var(--muted);font-size:.9rem">UPI, cards, net banking and other payment methods available through Razorpay</div></div><div class="secure-line">✓ Secure</div></div><form id="payForm" class="form-grid"><div class="field full"><label>SAIL Reference ID</label><input id="ref" required placeholder="e.g., SAIL-20260901-001"></div><div class="field"><label>Client Name</label><input id="pname" required></div><div class="field"><label>Email</label><input id="pemail" type="email" required></div><div class="field"><label>Payment Purpose</label><select id="purpose" required><option>Advance Payment</option><option>Part Payment</option><option>Final Payment</option><option>Consultation</option><option>Other</option></select></div><div class="field"><label>Approved Amount</label><div class="amount-wrap"><span>₹</span><input id="amount" type="number" min="1" step="0.01" required></div></div><div class="field full"><button class="btn btn-primary" type="submit">Proceed to Secure Payment</button></div></form><div class="pay-logo-row"><span class="pay-chip">UPI</span><span class="pay-chip">Credit / Debit Cards</span><span class="pay-chip">RuPay</span><span class="pay-chip">Net Banking</span><span class="pay-chip">Other enabled methods</span></div><div id="payStatus" style="margin-top:15px"></div><p class="payment-footer-note">SAIL does not collect card numbers, CVV, UPI PIN or banking passwords on this website.</p></div><div class="payment-panel qr-panel"><h2>Scan & Pay</h2><p>Use the official UPI QR when instructed by SAIL.</p><img class="qr-image" src="assets/sail-payment-qr-branded.png" alt="SAIL Research Solutions UPI QR code"><div class="merchant-badge"><img src="assets/logo.png" alt=""> SAIL Research Solutions</div><p class="verify">Before confirming any UPI transfer, verify the merchant details shown by your payment app and use your SAIL reference ID in the payment communication.</p><div class="note">QR payments are outside the automated signature-verification flow on this page. Retain your UTR / transaction ID for reconciliation.</div></div></div></div></section></main><script src="https://checkout.razorpay.com/v1/checkout.js"></script><script>
+const statusBox=document.getElementById('payStatus');
+document.getElementById('payForm').addEventListener('submit',async(e)=>{e.preventDefault();statusBox.innerHTML='<div class="note">Preparing secure checkout…</div>';const payload={reference:document.getElementById('ref').value.trim(),name:document.getElementById('pname').value.trim(),email:document.getElementById('pemail').value.trim(),paymentType:document.getElementById('purpose').value,amount:Number(document.getElementById('amount').value)};try{const base=window.SAIL_PAYMENT_API_BASE;if(!base)throw new Error('Payment API URL is not configured.');const r=await fetch(base+'/create-order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const data=await r.json();if(!r.ok||!data.success)throw new Error(data.error||'Unable to create payment order.');const options={key:data.keyId,amount:data.order.amount,currency:data.order.currency||'INR',name:'SAIL Research Solutions',description:payload.paymentType,order_id:data.order.id,prefill:{name:payload.name,email:payload.email},notes:{reference_id:payload.reference,payment_type:payload.paymentType},theme:{color:'#5C1856'},modal:{ondismiss:function(){statusBox.innerHTML='<div class="note">Checkout closed. No payment confirmation has been recorded on this page.</div>'; }},handler:async(resp)=>{statusBox.innerHTML='<div class="note">Payment received. Verifying signature…</div>';const vr=await fetch(base+'/verify-payment',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(resp)});const vd=await vr.json();if(vr.ok&&vd.verified){location.href='payment-success.html?ref='+encodeURIComponent(payload.reference)+'&payment='+encodeURIComponent(resp.razorpay_payment_id)+'&amount='+encodeURIComponent(payload.amount);}else{statusBox.innerHTML='<div class="note notice-danger"><strong>Verification not completed.</strong> Keep the Razorpay payment ID and contact SAIL.</div>';}}};new Razorpay(options).open();}catch(err){statusBox.innerHTML='<div class="note notice-danger"><strong>Payment setup:</strong> '+err.message+'</div>';}});
+</script>
 <footer class="footer"><div class="container">
   <div class="footer-grid">
     <div><div class="brand footer-brand"><img class="brand-logo" src="assets/logo.png" alt="SAIL emblem"><span class="brand-name">SAIL Research Solutions<small>Scientific Advancement. Impactful Legacy.</small></span></div><p>Professional research, scientific writing, statistical analysis and publication support across health and biomedical sciences.</p></div>
