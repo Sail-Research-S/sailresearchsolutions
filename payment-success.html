@@ -21,6 +21,7 @@
     .receipt-title{text-align:center;margin:4px 0 24px}.receipt-title h1{margin:0;color:var(--primary-dark);font-size:2rem}.receipt-title p{margin:6px 0;color:var(--muted)}
     .receipt-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:14px;overflow:hidden}.receipt-row{display:flex;justify-content:space-between;gap:18px;padding:13px 16px;border-bottom:1px solid var(--border)}.receipt-row:nth-last-child(-n+2){border-bottom:0}.receipt-row:nth-child(odd){border-right:1px solid var(--border)}.receipt-row span{color:var(--muted)}.receipt-row strong{text-align:right;color:var(--primary-dark);word-break:break-word}
     .amount-box{margin-top:20px;background:var(--primary-soft);border:1px solid #e8d7e5;border-radius:14px;padding:18px;display:flex;justify-content:space-between;align-items:center;gap:20px}.amount-box span{font-weight:600}.amount-box strong{font-size:1.45rem;color:var(--primary-dark)}
+    .gateway-note{margin:14px 0 0;padding:13px 15px;border-radius:12px;background:#fbf8fb;border:1px solid var(--border);color:var(--muted);font-size:.88rem;line-height:1.5}
     .receipt-note{margin:20px 0 0;text-align:center;color:var(--muted);font-size:.9rem}.receipt-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}
     @media(max-width:700px){.receipt-card{padding:22px}.receipt-head{align-items:flex-start}.receipt-grid{grid-template-columns:1fr}.receipt-row:nth-child(odd){border-right:0}.receipt-row:nth-last-child(-n+2){border-bottom:1px solid var(--border)}.receipt-row:last-child{border-bottom:0}}
     @media print{.topbar,.navbar,.page-hero,.footer,.receipt-actions{display:none!important}body{background:#fff}.receipt-wrap{max-width:none}.receipt-card{box-shadow:none;border:0;padding:0}.receipt-note{margin-top:28px}section{padding:0}.container{width:100%}}
@@ -52,7 +53,8 @@
       <div class="receipt-row"><span>Payment Status</span><strong>Successful</strong></div>
       <div class="receipt-row"><span>Payment Gateway</span><strong>Razorpay</strong></div>
     </div>
-    <div class="amount-box"><span>Amount Paid</span><strong id="amount">₹0.00</strong></div>
+    <div class="amount-box"><span>Amount to SAIL</span><strong id="amount">₹0.00</strong></div>
+    <div class="gateway-note">Razorpay transaction fee and applicable GST, where charged under the Customer Pays the Fee setting, are collected separately by Razorpay at checkout and may not be included in the SAIL amount shown above.</div>
     <p class="receipt-note">This is a computer-generated payment receipt and does not require a signature.</p>
   </div>
   <div class="receipt-actions"><button class="btn btn-primary" id="downloadBtn" type="button">Download Receipt</button><button class="btn btn-outline" type="button" onclick="window.print()">Print Receipt</button><a class="btn btn-outline" href="index.html">Return Home</a></div>
