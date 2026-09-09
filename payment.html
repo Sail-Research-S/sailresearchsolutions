@@ -136,10 +136,12 @@ document.getElementById('payForm').addEventListener('submit',async(e)=>{
         const vd=await vr.json();
         if(vr.ok&&vd.verified){
           const rp=vd.payment||{};
-          const baseAmount=Number(rp.amount||payload.amount||0);
+          const baseAmount=Number(payload.amount||0);
           const fee=Number(rp.fee||0);
           const tax=Number(rp.tax||0);
-          const total=baseAmount+fee+tax;
+          const razorpayAmount=Number(rp.amount||0);
+          const computedTotal=baseAmount+fee+tax;
+          const total=razorpayAmount>baseAmount?razorpayAmount:computedTotal;
           const p=new URLSearchParams({
             ref:payload.reference,
             payment:resp.razorpay_payment_id,
