@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Secure payment page for SAIL Research Solutions using Razorpay and UPI.">
+  <meta name="description" content="Secure payment page for SAIL Research Solutions using Razorpay.">
   <title>Payment | SAIL Research Solutions</title>
   <link rel="icon" href="assets/favicon.ico?v=20260901" sizes="any">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png?v=20260901">
@@ -12,6 +12,10 @@
   <meta name="theme-color" content="#5C1856">
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .payment-shell{display:block;max-width:820px;margin:0 auto}
+    .payment-panel{width:100%}
+  </style>
 </head>
 <body>
 <div class="topbar"><div class="container"><span>Academic Research • Scientific Writing • Statistics • Publication Support</span><a class="email-link" href="mailto:info@sailresearchsolutions.com?subject=Enquiry%20-%20SAIL%20Research%20Solutions" title="Email SAIL Research Solutions">info@sailresearchsolutions.com</a></div></div>
@@ -22,68 +26,90 @@
       <span class="brand-name">SAIL Research Solutions<small>Scientific Advancement. Impactful Legacy.</small></span>
     </a>
     <button class="menu-btn" aria-label="Open menu">☰</button>
-    <div class="nav-links">
-      <a href="index.html">Home</a><a href="about.html">About</a><div class="nav-menu nav-menu-services">
-        <button class="nav-trigger" type="button" aria-expanded="false">Services <span class="nav-caret">⌄</span></button>
-        <div class="mega-menu service-mega-menu" role="menu">
-          <div class="mega-col mega-planning"><h4><span>🧭</span> Research Planning</h4>
-            <a href="services.html#research-topic-selection">Research Topic Selection</a><a href="services.html#research-gap-identification">Research Gap Identification</a><a href="services.html#research-proposal">Research Proposal</a><a href="services.html#synopsis">Synopsis</a><a href="services.html#research-protocol">Research Protocol</a><a href="services.html#research-methodology">Methodology</a><a href="services.html#sample-size">Sample Size</a><a href="services.html#data-collection-tools">Data Collection Tools</a>
-          </div>
-          <div class="mega-col mega-thesis"><h4><span>📘</span> Thesis & Dissertation</h4>
-            <a href="services.html#dissertation-planning">Dissertation Planning</a><a href="services.html#thesis-chapterization">Chapterization</a><a href="services.html#thesis-introduction">Introduction</a><a href="services.html#literature-review">Literature Review</a><a href="services.html#results-chapter">Results</a><a href="services.html#discussion">Discussion</a><a href="services.html#summary-conclusion">Summary & Conclusion</a><a href="services.html#thesis-formatting">Final Formatting</a>
-          </div>
-          <div class="mega-col mega-writing"><h4><span>✍️</span> Scientific Writing</h4>
-            <a href="services.html#original-article">Original Research Article</a><a href="services.html#narrative-review">Narrative Review</a><a href="services.html#systematic-review">Systematic / Scoping Review</a><a href="services.html#case-report">Case Report / Case Series</a><a href="services.html#conference-abstract">Conference Abstract</a><a href="services.html#scientific-summary">Scientific Summary</a>
-          </div>
-          <div class="mega-col mega-editing"><h4><span>📝</span> Editing & Refinement</h4>
-            <a href="services.html#manuscript-editing">Manuscript Editing</a><a href="services.html#thesis-editing">Thesis Editing</a><a href="services.html#proofreading">Proofreading</a><a href="services.html#academic-rewriting">Academic Rewriting</a><a href="services.html#reference-formatting">Reference Formatting</a><a href="services.html#similarity-interpretation">Similarity Interpretation</a>
-          </div>
-          <div class="mega-col mega-statistics"><h4><span>📊</span> Statistics & Data</h4>
-            <a href="services.html#dataset-preparation">Dataset Preparation</a><a href="services.html#descriptive-statistics">Descriptive Statistics</a><a href="services.html#inferential-statistics">Inferential Statistics</a><a href="services.html#correlation-regression">Correlation & Regression</a><a href="services.html#sample-size-power">Sample Size / Power</a><a href="services.html#tables-graphs">Tables & Graphs</a><a href="services.html#results-interpretation">Results Interpretation</a>
-          </div>
-          <div class="mega-col mega-publication"><h4><span>📚</span> Publication Support</h4>
-            <a href="services.html#journal-identification">Journal Identification</a><a href="services.html#journal-formatting">Journal Formatting</a><a href="services.html#cover-letter">Cover Letter</a><a href="services.html#submission-documents">Submission Documents</a><a href="services.html#reviewer-response">Reviewer Response</a><a href="services.html#revised-manuscript">Revised Manuscript</a><a href="services.html#graphical-abstract">Graphical Abstract</a>
-          </div>
-          <div class="mega-col mega-communication"><h4><span>🎤</span> Academic Communication</h4>
-            <a href="services.html#powerpoint">Scientific PowerPoint</a><a href="services.html#conference-poster">Conference Poster</a><a href="services.html#journal-club">Journal Club</a><a href="services.html#case-presentation">Case Presentation</a><a href="services.html#teaching-resources">Teaching Material</a>
-          </div>
-          <div class="mega-col mega-institutional"><h4><span>🏛️</span> Institutional Support</h4>
-            <a href="services.html#research-workshop">Research Workshops</a><a href="services.html#fdp-content">FDP Content</a><a href="services.html#research-documentation">Research Documentation</a><a href="services.html#publication-readiness">Publication Training</a><a href="services.html#institutional-support">Customized Support</a>
-          </div>
-          <div class="mega-footer"><a class="mega-all" href="services.html#service-directory">View complete service directory →</a></div>
-        </div>
-      </div><div class="nav-menu nav-menu-small">
-        <button class="nav-trigger" type="button" aria-expanded="false">Publication <span class="nav-caret">⌄</span></button>
-        <div class="mini-dropdown publication-dropdown">
-          <a href="publication.html#journal-identification"><span>🔎</span><div><b>Journal Identification</b><small>Scope, indexing and suitability</small></div></a>
-          <a href="publication.html#journal-formatting"><span>🧾</span><div><b>Journal Formatting</b><small>Guidelines, tables and references</small></div></a>
-          <a href="publication.html#submission-documents"><span>📤</span><div><b>Submission Documents</b><small>Cover letter, title page and checklist</small></div></a>
-          <a href="publication.html#graphical-abstract"><span>🎨</span><div><b>Graphical Abstract</b><small>Publication-oriented visual planning</small></div></a>
-          <a href="publication.html#reviewer-response"><span>💬</span><div><b>Reviewer Response</b><small>Revision and point-by-point response</small></div></a>
-        </div>
-      </div><div class="nav-menu nav-menu-small">
-        <button class="nav-trigger" type="button" aria-expanded="false">Resources <span class="nav-caret">⌄</span></button>
-        <div class="mini-dropdown resources-dropdown">
-          <a href="resources.html#methodology"><span>🧭</span><div><b>Research Methodology</b><small>Design, sampling and outcomes</small></div></a>
-          <a href="resources.html#writing"><span>✍️</span><div><b>Scientific Writing</b><small>Structure and academic communication</small></div></a>
-          <a href="resources.html#statistics"><span>📊</span><div><b>Statistics & Data</b><small>Analysis concepts and interpretation</small></div></a>
-          <a href="resources.html#publication"><span>📚</span><div><b>Publication</b><small>Journal readiness and submission</small></div></a>
-          <a href="resources.html#ethics"><span>⚖️</span><div><b>Research Ethics</b><small>Integrity and responsible conduct</small></div></a>
-          <a href="resources.html#communication"><span>🎤</span><div><b>Academic Communication</b><small>Presentations and scientific visuals</small></div></a>
-        </div>
-      </div><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
-    </div>
+    <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="publication.html">Publication</a><a href="resources.html">Resources</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
     <div class="nav-actions"><a class="btn btn-outline" href="payment.html"><span class="btn-ico" aria-hidden="true">💳</span>Make Payment</a><a class="btn btn-primary" href="submit.html"><span class="btn-ico" aria-hidden="true">📨</span>Submit Requirement</a></div>
   </div>
-</nav><main><section class="page-hero payment-page-hero"><div class="container"><span class="pill">Secure Payment</span><h1>Secure Payment to SAIL Research Solutions</h1><p>Use this page only after receiving your SAIL reference ID, quotation or approved payable amount from SAIL Research Solutions.</p></div></section><section><div class="container"><div class="payment-shell"><div class="payment-panel"><h2>Pay Online</h2><div class="gateway-badge"><div><strong>Razorpay Secure Checkout</strong><div style="color:var(--muted);font-size:.9rem">UPI, cards, net banking and other payment methods available through Razorpay</div></div><div class="secure-line">✓ Secure</div></div><form id="payForm" class="form-grid"><div class="field full"><label>SAIL Reference ID</label><input id="ref" required placeholder="e.g., SAIL-20260901-001"></div><div class="field"><label>Client Name</label><input id="pname" required></div><div class="field"><label>Email</label><input id="pemail" type="email" required></div><div class="field"><label>Payment Purpose</label><select id="purpose" required><option>Advance Payment</option><option>Part Payment</option><option>Final Payment</option><option>Consultation</option><option>Other</option></select></div><div class="field"><label>Approved Amount</label><div class="amount-wrap"><span>₹</span><input id="amount" type="number" min="1" step="0.01" required></div></div><div class="field full"><button class="btn btn-primary" type="submit">Proceed to Secure Payment</button></div></form><div class="pay-logo-row"><span class="pay-chip">UPI</span><span class="pay-chip">Credit / Debit Cards</span><span class="pay-chip">RuPay</span><span class="pay-chip">Net Banking</span><span class="pay-chip">Other enabled methods</span></div><div id="payStatus" style="margin-top:15px"></div><p class="payment-footer-note">SAIL does not collect card numbers, CVV, UPI PIN or banking passwords on this website.</p></div><div class="payment-panel qr-panel"><h2>Scan & Pay</h2><p>Use the official UPI QR when instructed by SAIL.</p><img class="qr-image" src="assets/sail-payment-qr-branded.png" alt="SAIL Research Solutions UPI QR code"><div class="merchant-badge"><img src="assets/sail-logo-2026.png?v=20260901" alt=""> SAIL Research Solutions</div><p class="verify">Before confirming any UPI transfer, verify the merchant details shown by your payment app and use your SAIL reference ID in the payment communication.</p><div class="note">QR payments are outside the automated signature-verification flow on this page. Retain your UTR / transaction ID for reconciliation.</div></div></div></div></section></main><script src="https://checkout.razorpay.com/v1/checkout.js"></script><script>
+</nav>
+<main>
+  <section class="page-hero payment-page-hero"><div class="container"><span class="pill">Secure Payment</span><h1>Secure Payment to SAIL Research Solutions</h1><p>Use this page only after receiving your SAIL reference ID and approved payable amount from SAIL Research Solutions.</p></div></section>
+  <section><div class="container"><div class="payment-shell"><div class="payment-panel">
+    <h2>Pay Online</h2>
+    <div class="gateway-badge"><div><strong>Razorpay Secure Checkout</strong><div style="color:var(--muted);font-size:.9rem">UPI, cards, net banking and other payment methods available through Razorpay</div></div><div class="secure-line">✓ Secure</div></div>
+    <form id="payForm" class="form-grid">
+      <div class="field full"><label>SAIL Reference ID</label><input id="ref" required placeholder="e.g., SAIL/2026A02/A01041"></div>
+      <div class="field"><label>Client Name</label><input id="pname" required></div>
+      <div class="field"><label>Email</label><input id="pemail" type="email" required></div>
+      <div class="field"><label>Payment Purpose</label><select id="purpose" required><option>Advance Payment</option><option>Part Payment</option><option>Final Payment</option><option>Consultation</option><option>Other</option></select></div>
+      <div class="field"><label>Approved Amount</label><div class="amount-wrap"><span>₹</span><input id="amount" type="number" min="1" step="0.01" required inputmode="decimal"></div></div>
+      <div class="field full"><button class="btn btn-primary" type="submit">Proceed to Secure Payment</button></div>
+    </form>
+    <div class="pay-logo-row"><span class="pay-chip">UPI</span><span class="pay-chip">Credit / Debit Cards</span><span class="pay-chip">RuPay</span><span class="pay-chip">Net Banking</span><span class="pay-chip">Other enabled methods</span></div>
+    <div id="payStatus" style="margin-top:15px"></div>
+    <p class="payment-footer-note">SAIL does not collect card numbers, CVV, UPI PIN or banking passwords on this website.</p>
+  </div></div></div></section>
+</main>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
 const statusBox=document.getElementById('payStatus');
-document.getElementById('payForm').addEventListener('submit',async(e)=>{e.preventDefault();statusBox.innerHTML='<div class="note">Preparing secure checkout…</div>';const payload={reference:document.getElementById('ref').value.trim(),name:document.getElementById('pname').value.trim(),email:document.getElementById('pemail').value.trim(),paymentType:document.getElementById('purpose').value,amount:Number(document.getElementById('amount').value)};try{const base=window.SAIL_PAYMENT_API_BASE;if(!base)throw new Error('Payment API URL is not configured.');const r=await fetch(base+'/create-order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const data=await r.json();if(!r.ok||!data.success)throw new Error(data.error||'Unable to create payment order.');const options={key:data.keyId,amount:data.order.amount,currency:data.order.currency||'INR',name:'SAIL Research Solutions',description:payload.paymentType,order_id:data.order.id,prefill:{name:payload.name,email:payload.email},notes:{reference_id:payload.reference,payment_type:payload.paymentType},theme:{color:'#5C1856'},modal:{ondismiss:function(){statusBox.innerHTML='<div class="note">Checkout closed. No payment confirmation has been recorded on this page.</div>'; }},handler:async(resp)=>{statusBox.innerHTML='<div class="note">Payment received. Verifying signature…</div>';const vr=await fetch(base+'/verify-payment',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(resp)});const vd=await vr.json();if(vr.ok&&vd.verified){location.href='payment-success.html?ref='+encodeURIComponent(payload.reference)+'&payment='+encodeURIComponent(resp.razorpay_payment_id)+'&amount='+encodeURIComponent(payload.amount);}else{statusBox.innerHTML='<div class="note notice-danger"><strong>Verification not completed.</strong> Keep the Razorpay payment ID and contact SAIL.</div>';}}};new Razorpay(options).open();}catch(err){statusBox.innerHTML='<div class="note notice-danger"><strong>Payment setup:</strong> '+err.message+'</div>';}});
+document.getElementById('payForm').addEventListener('submit',async(e)=>{
+  e.preventDefault();
+  statusBox.innerHTML='<div class="note">Preparing secure checkout…</div>';
+  const payload={
+    reference:document.getElementById('ref').value.trim(),
+    name:document.getElementById('pname').value.trim(),
+    email:document.getElementById('pemail').value.trim(),
+    paymentType:document.getElementById('purpose').value,
+    amount:Number(document.getElementById('amount').value)
+  };
+  try{
+    const base=window.SAIL_PAYMENT_API_BASE;
+    if(!base)throw new Error('Payment API URL is not configured.');
+    const r=await fetch(base+'/create-order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    const data=await r.json();
+    if(!r.ok||!data.success)throw new Error(data.error||'Unable to create payment order.');
+    const options={
+      key:data.keyId,
+      amount:data.order.amount,
+      currency:data.order.currency||'INR',
+      name:'SAIL Research Solutions',
+      description:payload.paymentType,
+      order_id:data.order.id,
+      prefill:{name:payload.name,email:payload.email},
+      notes:{reference_id:payload.reference,payment_type:payload.paymentType},
+      theme:{color:'#5C1856'},
+      modal:{ondismiss:function(){statusBox.innerHTML='<div class="note">Checkout closed. No payment confirmation has been recorded on this page.</div>'; }},
+      handler:async(resp)=>{
+        statusBox.innerHTML='<div class="note">Payment received. Verifying signature…</div>';
+        const vr=await fetch(base+'/verify-payment',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(resp)});
+        const vd=await vr.json();
+        if(vr.ok&&vd.verified){
+          const p=new URLSearchParams({
+            ref:payload.reference,
+            payment:resp.razorpay_payment_id,
+            order:resp.razorpay_order_id,
+            amount:String(payload.amount),
+            name:payload.name,
+            email:payload.email,
+            purpose:payload.paymentType,
+            paidAt:new Date().toISOString()
+          });
+          location.href='payment-success.html?'+p.toString();
+        }else{
+          statusBox.innerHTML='<div class="note notice-danger"><strong>Verification not completed.</strong> Keep the Razorpay payment ID and contact SAIL.</div>';
+        }
+      }
+    };
+    new Razorpay(options).open();
+  }catch(err){
+    statusBox.innerHTML='<div class="note notice-danger"><strong>Payment setup:</strong> '+err.message+'</div>';
+  }
+});
 </script>
 <footer class="footer"><div class="container">
   <div class="footer-grid">
     <div><div class="brand footer-brand"><img class="brand-logo" src="assets/sail-logo-2026.png?v=20260901" alt="SAIL emblem"><span class="brand-name">SAIL Research Solutions<small>Scientific Advancement. Impactful Legacy.</small></span></div><p>Professional research, scientific writing, statistical analysis and publication support across health and biomedical sciences.</p></div>
     <div><h4>Services</h4><a href="services.html#planning">Research Planning</a><a href="services.html#thesis">Thesis & Dissertation</a><a href="services.html#statistics">Statistics</a><a href="publication.html">Publication Support</a></div>
-    <div><h4>For Clients</h4><a href="submit.html"><span class="btn-ico" aria-hidden="true">📨</span>Submit Requirement</a><a href="payment.html"><span class="btn-ico" aria-hidden="true">💳</span>Make Payment</a><a href="resources.html">Research Resources</a><a href="faq.html">FAQ</a></div>
+    <div><h4>For Clients</h4><a href="submit.html">Submit Requirement</a><a href="payment.html">Make Payment</a><a href="resources.html">Research Resources</a><a href="faq.html">FAQ</a></div>
     <div><h4>Legal</h4><a href="policies.html#integrity">Academic Integrity</a><a href="policies.html#privacy">Privacy</a><a href="policies.html#terms">Terms</a><a href="policies.html#refund">Refund Policy</a></div>
   </div>
   <div class="footer-bottom">© 2026 SAIL Research Solutions. All rights reserved. • FC4P+2QP, SH 15, Gobichettipalayam, Tamil Nadu 638476 • info@sailresearchsolutions.com</div>
