@@ -75,7 +75,8 @@
 </div></div></section>
 </main>
 <footer class="footer"><div class="container"><div class="footer-bottom">© 2026 SAIL Research Solutions. All rights reserved. • FC4P+2QP, SH 15, Gobichettipalayam, Tamil Nadu 638476 • info@sailresearchsolutions.com</div></div></footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 const q=new URLSearchParams(location.search);
 const ref=q.get('ref')||'';
@@ -108,11 +109,32 @@ document.getElementById('total').textContent=money(total);
 const paymentStatus=(q.get('status')||'captured').toLowerCase();
 document.getElementById('status').textContent='Payment Status: '+(paymentStatus==='captured'?'Successful / Captured':paymentStatus.charAt(0).toUpperCase()+paymentStatus.slice(1));
 
-document.getElementById('downloadBtn').addEventListener('click',()=>{
-  const el=document.getElementById('receiptCard');
-  const filename=receiptNo.replaceAll('/','-')+'-Receipt.pdf';
-  const opt={margin:8,filename,image:{type:'jpeg',quality:.98},html2canvas:{scale:2,useCORS:true},jsPDF:{unit:'mm',format:'a4',orientation:'portrait'}};
-  html2pdf().set(opt).from(el).save();
+document.getElementById('downloadBtn').addEventListener('click',async()=>{
+  const btn=document.getElementById('downloadBtn');
+  const original=btn.textContent;
+  try{
+    btn.disabled=true;
+    btn.textContent='Preparing PDF…';
+    const el=document.getElementById('receiptCard');
+    const canvas=await html2canvas(el,{scale:2,useCORS:true,backgroundColor:'#ffffff',scrollX:0,scrollY:-window.scrollY,windowWidth:el.scrollWidth});
+    const imgData=canvas.toDataURL('image/jpeg',0.98);
+    const {jsPDF}=window.jspdf;
+    const pdf=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
+    const pageW=210,pageH=297,margin=10;
+    const maxW=pageW-(margin*2),maxH=pageH-(margin*2);
+    let imgW=maxW;
+    let imgH=canvas.height*imgW/canvas.width;
+    if(imgH>maxH){imgH=maxH;imgW=canvas.width*imgH/canvas.height;}
+    const x=(pageW-imgW)/2;
+    const y=(pageH-imgH)/2;
+    pdf.addImage(imgData,'JPEG',x,y,imgW,imgH,'','FAST');
+    pdf.save(receiptNo.replaceAll('/','-')+'-Receipt.pdf');
+  }catch(err){
+    alert('Unable to download the PDF. Please use Print Receipt as an alternative.');
+  }finally{
+    btn.disabled=false;
+    btn.textContent=original;
+  }
 });
 </script>
 <script src="assets/site.js"></script>
