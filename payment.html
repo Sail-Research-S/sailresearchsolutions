@@ -13,8 +13,13 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="assets/styles.css">
   <style>
-    .payment-shell{display:block;max-width:820px;margin:0 auto}
-    .payment-panel{width:100%}
+    .payment-shell{display:block;max-width:860px;margin:0 auto}
+    .payment-panel{width:100%;background:#fff;border:1px solid var(--border);border-radius:22px;box-shadow:var(--shadow);padding:30px}
+    .checkout-brand{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:4px 0 22px;border-bottom:1px solid var(--border);margin-bottom:22px}
+    .checkout-brand-left{display:flex;align-items:center;gap:14px}.checkout-brand-left img{width:72px;height:58px;object-fit:contain}.checkout-brand-left h2{margin:0;color:var(--primary-dark)}.checkout-brand-left p{margin:4px 0 0;color:var(--muted);font-size:.9rem}
+    .checkout-secure{display:flex;align-items:center;gap:9px;padding:10px 13px;border:1px solid var(--border);border-radius:12px;background:#fbf8fb;white-space:nowrap}.checkout-secure strong{color:var(--primary-dark)}.secure-dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#edf8f2;color:var(--success);font-weight:800}
+    .payment-panel>h2{margin-top:0}.pay-intro{margin:-4px 0 18px;color:var(--muted)}
+    .gateway-badge{border-radius:14px;padding:15px 16px;background:linear-gradient(135deg,#fbf8fb,#fff);border:1px solid var(--border)}
     .fee-summary{margin-top:14px;border:1px solid var(--border);border-radius:14px;background:#fff;overflow:hidden}
     .fee-summary[hidden]{display:none}
     .fee-summary summary{cursor:pointer;list-style:none;padding:14px 16px;font-weight:700;display:flex;justify-content:space-between;align-items:center;color:var(--primary-dark)}
@@ -24,6 +29,9 @@
     .fee-row strong{color:var(--primary-dark)}
     .fee-row.total{margin-top:5px;padding-top:12px;border-top:1px solid var(--border);font-size:1.08rem;font-weight:800}
     .fee-note{margin:10px 0 0;font-size:.88rem;color:var(--muted);line-height:1.5}
+    .payment-trust{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}.trust-chip{display:inline-flex;align-items:center;gap:6px;padding:8px 11px;border:1px solid var(--border);border-radius:999px;background:#fff;color:var(--muted);font-size:.84rem}.trust-chip b{color:var(--success)}
+    .payment-panel .btn[type="submit"]{min-height:48px;font-size:1rem;font-weight:700}
+    @media(max-width:700px){.payment-panel{padding:22px}.checkout-brand{align-items:flex-start;flex-direction:column}.checkout-secure{width:100%;justify-content:center}}
   </style>
 </head>
 <body>
@@ -42,8 +50,13 @@
 <main>
   <section class="page-hero payment-page-hero"><div class="container"><span class="pill">Secure Payment</span><h1>Secure Payment to SAIL Research Solutions</h1><p>Use this page only after receiving your SAIL reference ID and approved payable amount from SAIL Research Solutions.</p></div></section>
   <section><div class="container"><div class="payment-shell"><div class="payment-panel">
-    <h2>Pay Online</h2>
-    <div class="gateway-badge"><div><strong>Razorpay Secure Checkout</strong><div style="color:var(--muted);font-size:.9rem">UPI, cards, net banking and other payment methods available through Razorpay</div></div><div class="secure-line">✓ Secure</div></div>
+    <div class="checkout-brand">
+      <div class="checkout-brand-left"><img src="assets/sail-logo-2026.png?v=20260901" alt="SAIL Research Solutions logo"><div><h2>SAIL Research Solutions</h2><p>Secure online payment portal</p></div></div>
+      <div class="checkout-secure"><span class="secure-dot">✓</span><div><strong>Razorpay Secure Checkout</strong><div style="font-size:.78rem;color:var(--muted)">Encrypted payment processing</div></div></div>
+    </div>
+    <h2>Payment Details</h2>
+    <p class="pay-intro">Enter the approved details below. Razorpay will display the applicable charges before you confirm the payment.</p>
+    <div class="gateway-badge"><div><strong>Pay safely with Razorpay</strong><div style="color:var(--muted);font-size:.9rem">UPI, cards, net banking and other enabled payment methods</div></div><div class="secure-line">✓ Secure</div></div>
     <form id="payForm" class="form-grid">
       <div class="field full"><label>SAIL Reference ID</label><input id="ref" required placeholder="e.g., SAIL/2026A02/A01041"></div>
       <div class="field"><label>Client Name</label><input id="pname" required></div>
@@ -58,13 +71,13 @@
             <div class="fee-row"><span>Estimated Transaction Fee</span><strong id="sumFee">₹0.00</strong></div>
             <div class="fee-row"><span>Estimated GST</span><strong id="sumGst">₹0.00</strong></div>
             <div class="fee-row total"><span>Estimated Total Payable</span><strong id="sumTotal">₹0.00</strong></div>
-            <p class="fee-note">The above fee and GST are indicative for standard domestic payment methods. Razorpay will calculate and display the actual transaction fee, applicable GST and final payable amount at checkout based on the payment method selected.</p>
+            <p class="fee-note">Razorpay will calculate and display the actual transaction fee, applicable GST and final payable amount at checkout based on the payment method selected.</p>
           </div>
         </details>
       </div>
       <div class="field full"><button class="btn btn-primary" type="submit">Proceed to Secure Payment</button></div>
     </form>
-    <div class="pay-logo-row"><span class="pay-chip">UPI</span><span class="pay-chip">Credit / Debit Cards</span><span class="pay-chip">RuPay</span><span class="pay-chip">Net Banking</span><span class="pay-chip">Other enabled methods</span></div>
+    <div class="payment-trust"><span class="trust-chip"><b>✓</b> UPI</span><span class="trust-chip"><b>✓</b> Cards</span><span class="trust-chip"><b>✓</b> Net Banking</span><span class="trust-chip"><b>✓</b> Secure Checkout</span></div>
     <div id="payStatus" style="margin-top:15px"></div>
     <p class="payment-footer-note">SAIL does not collect card numbers, CVV, UPI PIN or banking passwords on this website.</p>
   </div></div></div></section>
@@ -122,15 +135,25 @@ document.getElementById('payForm').addEventListener('submit',async(e)=>{
         const vr=await fetch(base+'/verify-payment',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(resp)});
         const vd=await vr.json();
         if(vr.ok&&vd.verified){
+          const rp=vd.payment||{};
+          const baseAmount=Number(rp.amount||payload.amount||0);
+          const fee=Number(rp.fee||0);
+          const tax=Number(rp.tax||0);
+          const total=baseAmount+fee+tax;
           const p=new URLSearchParams({
             ref:payload.reference,
             payment:resp.razorpay_payment_id,
             order:resp.razorpay_order_id,
-            amount:String(payload.amount),
+            amount:String(baseAmount),
+            fee:String(fee),
+            tax:String(tax),
+            total:String(total),
+            method:rp.method||'',
+            status:rp.status||'captured',
             name:payload.name,
             email:payload.email,
             purpose:payload.paymentType,
-            paidAt:new Date().toISOString()
+            paidAt:rp.createdAt||new Date().toISOString()
           });
           location.href='payment-success.html?'+p.toString();
         }else{
