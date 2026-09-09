@@ -103,6 +103,13 @@ function updateFeeSummary(){
   feeSummary.hidden=false;
 }
 amountInput.addEventListener('input',updateFeeSummary);
+function razorpayErrorMessage(data){
+  if(!data)return 'Unable to create payment order.';
+  const d=data.details;
+  return (d&&d.error&&(d.error.description||d.error.reason||d.error.code)) ||
+         (d&&d.description) ||
+         data.message || data.error || 'Unable to create payment order.';
+}
 document.getElementById('payForm').addEventListener('submit',async(e)=>{
   e.preventDefault();
   statusBox.innerHTML='<div class="note">Preparing secure checkout…</div>';
@@ -117,8 +124,9 @@ document.getElementById('payForm').addEventListener('submit',async(e)=>{
     const base=window.SAIL_PAYMENT_API_BASE;
     if(!base)throw new Error('Payment API URL is not configured.');
     const r=await fetch(base+'/create-order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-    const data=await r.json();
-    if(!r.ok||!data.success)throw new Error(data.error||'Unable to create payment order.');
+    let data={};
+    try{data=await r.json();}catch(_){throw new Error('Payment API returned an unreadable response.');}
+    if(!r.ok||!data.success)throw new Error(razorpayErrorMessage(data));
     const options={
       key:data.keyId,
       amount:data.order.amount,
@@ -159,7 +167,8 @@ document.getElementById('payForm').addEventListener('submit',async(e)=>{
           });
           location.href='payment-success.html?'+p.toString();
         }else{
-          statusBox.innerHTML='<div class="note notice-danger"><strong>Verification not completed.</strong> Keep the Razorpay payment ID and contact SAIL.</div>';
+          const verifyMsg=(vd&&vd.error)||'Verification not completed.';
+          statusBox.innerHTML='<div class="note notice-danger"><strong>Verification not completed.</strong> '+verifyMsg+' Keep the Razorpay payment ID and contact SAIL.</div>';
         }
       }
     };
