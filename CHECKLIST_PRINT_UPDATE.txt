@@ -1,0 +1,16 @@
+SAIL Research Solutions — Checklist Print Update
+
+Added Print Checklist to every interactive reporting checklist.
+
+The print output includes:
+- checklist title
+- current checked/unchecked items
+- completed item count
+- completion percentage
+- print date/time
+- SAIL Research Solutions heading
+
+Only the selected checklist is printed. Users can also choose Save as PDF
+from the browser print dialog.
+
+Existing categorized Research Tools layout and calculator behavior are unchanged.

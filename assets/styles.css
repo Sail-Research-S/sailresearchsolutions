@@ -510,3 +510,8 @@ details.service-tile.hash-target{border-color:var(--primary);box-shadow:0 0 0 3p
 }
 
 
+
+/* Resources dropdown full section menu */
+.resources-dropdown{min-width:330px}
+.resources-dropdown>a{white-space:normal}
+@media(min-width:901px){.nav-menu-small>.resources-dropdown{top:100%}}

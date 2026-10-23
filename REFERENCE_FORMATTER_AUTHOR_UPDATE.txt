@@ -1,0 +1,10 @@
+SAIL Research Solutions — Reference Formatter Author Field Update
+
+The Reference Formatter no longer displays the site owner's personal name
+as an example or default author.
+
+The author field now uses a neutral example:
+Smith J, Kumar R
+
+No calculator, checklist, Resources navigation, print option, or other
+Research Tools functionality was changed.

@@ -1,0 +1,21 @@
+SAIL Research Solutions — Prevalence Sample Size Calculator Fix
+
+Decimal input issue corrected.
+
+The browser previously used the default step=1 for number fields, which caused
+valid values such as 24.7% or 4.5% to be rejected before JavaScript calculation.
+
+The calculator now accepts decimal percentage values.
+
+Formula:
+n = Z² × p × (1 − p) / d²
+
+If non-response is entered:
+Adjusted n = n / (1 − non-response proportion)
+
+Example:
+Prevalence = 24.7%
+Margin of error = 5%
+Confidence level = 95%
+Base sample size ≈ 285.80
+Required rounded sample size = 286

@@ -1,0 +1,13 @@
+SAIL Research Solutions — Checklist Print Header Update
+
+The checklist print/PDF header now shows:
+
+SAIL Research Solutions
+Research Tools & Resources
+Reporting Checklist
+[Selected checklist title]
+Completion status
+Print date/time
+
+This replaces the earlier header that showed only the organization name.
+The selected checklist remains the only page content printed.

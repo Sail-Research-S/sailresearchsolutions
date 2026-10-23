@@ -1,0 +1,23 @@
+SAIL Research Solutions — Categorised Research Tools Layout
+
+Research Tools are now organised into categories with icons:
+- Sample Size & Study Planning
+- Epidemiology & Risk Measures
+- Diagnostic Research
+- Statistics & Effect Size
+- Clinical & Pharmacy Calculators
+- Research Utilities
+- Manuscript & Writing
+- References & Literature
+- Reporting Checklists
+
+Categories remain collapsed by default, so all calculators are not visible at once.
+
+When a tool opens:
+- only that tool expands
+- it becomes full-width inside its category
+- neighbouring tools retain their natural compact size
+- another open tool in the same category closes automatically
+
+Search automatically opens only categories containing matching tools.
+All existing calculator and checklist logic is retained.

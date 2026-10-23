@@ -1,123 +1,505 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Detailed practical resources on research methodology, scientific writing, statistics, publication, research ethics and academic communication.">
-  <title>Resources | SAIL Research Solutions</title>
-  <link rel="icon" href="assets/favicon.ico?v=20260901" sizes="any">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png?v=20260901"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png?v=20260901"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20260901"><meta name="theme-color" content="#5C1856"><link rel="manifest" href="site.webmanifest"><link rel="stylesheet" href="assets/styles.css">
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Detailed practical resources on research methodology, scientific writing, statistics, publication, research ethics and academic communication." name="description"/>
+<title>Resources | SAIL Research Solutions</title>
+<link href="assets/favicon.ico?v=20260901" rel="icon" sizes="any"/>
+<link href="assets/favicon-16x16.png?v=20260901" rel="icon" sizes="16x16" type="image/png"/><link href="assets/favicon-32x32.png?v=20260901" rel="icon" sizes="32x32" type="image/png"/><link href="assets/apple-touch-icon.png?v=20260901" rel="apple-touch-icon"/><meta content="#5C1856" name="theme-color"/><link href="site.webmanifest" rel="manifest"/><link href="assets/styles.css" rel="stylesheet"/>
+<style id="research-tools-inline-style">
+.resource-view{display:none}.resource-view.active{display:block}
+body.resource-filter .page-hero{display:none}
+.resource-directory{padding-top:30px;padding-bottom:60px}
+.resource-picker{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.resource-picker a{display:inline-flex;align-items:center;padding:9px 12px;border:1px solid rgba(92,24,86,.16);border-radius:999px;text-decoration:none;color:#5C1856;background:#fff;font-weight:700;font-size:.86rem}
+.resource-picker a.current{background:#5C1856;color:#fff}
+.resource-native-detail{border:1px solid rgba(92,24,86,.14);border-radius:12px;background:#fff;margin:10px 0;overflow:hidden}
+.resource-native-detail summary{cursor:pointer;padding:15px 17px;font-weight:700;color:#3d203b;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.resource-native-detail summary::-webkit-details-marker{display:none}
+.resource-native-detail summary::after{content:'+';font-size:1.25rem;color:#6f3a69}.resource-native-detail[open] summary::after{content:'−'}
+.resource-native-detail-body{padding:0 17px 17px;color:#514652;line-height:1.65}
+.tools-intro{margin-bottom:20px}.tools-intro h2{margin-bottom:8px}.tools-intro p{max-width:900px}
+.tool-searchbar{display:grid;grid-template-columns:1fr 260px;gap:10px;margin:18px 0}
+.tool-searchbar input,.tool-searchbar select,.tool-form input,.tool-form select,.tool-form textarea{width:100%;padding:11px 12px;border:1px solid rgba(92,24,86,.2);border-radius:9px;background:#fff;font:inherit}
+.tool-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.tool-item{border:1px solid rgba(92,24,86,.15);border-radius:14px;background:#fff;overflow:hidden;box-shadow:0 5px 18px rgba(65,28,62,.05)}
+.tool-item summary{cursor:pointer;padding:16px;list-style:none;display:flex;align-items:flex-start;gap:12px}.tool-item summary::-webkit-details-marker{display:none}
+.tool-emoji{width:38px;height:38px;border-radius:10px;background:#f4eaf3;display:grid;place-items:center;flex:0 0 auto}.tool-title{font-weight:800;color:#321d31}.tool-sub{display:block;color:#746a73;font-size:.78rem;margin-top:3px;line-height:1.4}
+.tool-item summary::after{content:'Open';margin-left:auto;color:#5C1856;font-weight:800;font-size:.76rem}.tool-item[open] summary::after{content:'Close'}
+.tool-panel{border-top:1px solid rgba(92,24,86,.1);padding:16px}.tool-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.tool-form .full{grid-column:1/-1}.tool-form label{display:block;font-size:.76rem;font-weight:800;margin-bottom:5px}.tool-action{border:0;border-radius:9px;background:#5C1856;color:#fff;padding:10px 14px;font-weight:800;cursor:pointer}.tool-action.secondary{background:#f2e8f1;color:#5C1856}.tool-result{display:none;margin-top:13px;padding:13px;border:1px solid #cde5d5;border-radius:10px;background:#f3fbf5;color:#214f31;line-height:1.55}.tool-result.show{display:block}.tool-result pre{white-space:pre-wrap;margin:0;font:inherit}
+.checklist-progress{height:9px;background:#eee5ed;border-radius:999px;overflow:hidden;margin:8px 0 12px}.checklist-progress span{display:block;height:100%;width:0;background:#5C1856}.check-row{display:flex;gap:9px;padding:8px 0;border-bottom:1px dashed #e8dfe7}.check-row input{margin-top:3px}
+.tool-note{font-size:.75rem;color:#786f78;margin-top:10px}.external-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.external-actions a{display:inline-flex;text-decoration:none}
+@media(max-width:760px){.tool-grid,.tool-searchbar,.tool-form{grid-template-columns:1fr}.resources-dropdown{max-height:72vh;overflow:auto}.tool-form .full{grid-column:auto}}
+
+
+/* Categorised Research Tools layout */
+.tool-searchbar-single{
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center
+}
+.tool-search-hint{
+  color:#766d76;
+  font-size:.78rem;
+  line-height:1.4;
+  max-width:340px
+}
+.tool-category-list{
+  display:grid;
+  gap:14px
+}
+.tool-category{
+  border:1px solid rgba(92,24,86,.14);
+  border-radius:16px;
+  background:#fff;
+  overflow:hidden;
+  box-shadow:0 6px 20px rgba(65,28,62,.05)
+}
+.tool-category>summary{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:17px 18px;
+  min-height:72px
+}
+.tool-category>summary::-webkit-details-marker{display:none}
+.tool-category>summary::after{
+  content:"＋";
+  margin-left:8px;
+  color:#5C1856;
+  font-size:1.2rem;
+  font-weight:800
+}
+.tool-category[open]>summary::after{content:"−"}
+.tool-category-icon{
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  background:linear-gradient(145deg,#f7eef6,#efe2ed);
+  font-size:1.25rem
+}
+.tool-category-text{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:3px
+}
+.tool-category-title{
+  color:#321d31;
+  font-weight:800;
+  font-size:1rem
+}
+.tool-category-sub{
+  color:#746a73;
+  font-size:.78rem;
+  line-height:1.4
+}
+.tool-category-count{
+  margin-left:auto;
+  flex:0 0 auto;
+  border-radius:999px;
+  background:#f4eaf3;
+  color:#5C1856;
+  padding:5px 9px;
+  font-size:.7rem;
+  font-weight:800
+}
+.tool-category-body{
+  border-top:1px solid rgba(92,24,86,.09);
+  padding:14px
+}
+.tool-category-tools{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  gap:12px
+}
+.tool-category-tools>.tool-item{
+  flex:1 1 calc(50% - 6px);
+  min-width:280px;
+  align-self:flex-start;
+  height:auto!important;
+  min-height:0!important;
+  margin:0
+}
+.tool-category-tools>.tool-item[open]{
+  flex-basis:100%;
+  width:100%
+}
+.tool-category-tools>.tool-item summary{
+  min-height:72px
+}
+.tool-category-tools>.tool-item[open] summary{
+  background:#fcf9fc
+}
+.tool-item[hidden],.tool-category[hidden]{display:none!important}
+@media(max-width:760px){
+  .tool-searchbar-single{grid-template-columns:1fr}
+  .tool-category-tools>.tool-item{min-width:100%;flex-basis:100%}
+  .tool-category-count{display:none}
+  .tool-category>summary{align-items:flex-start}
+}
+
+
+/* Checklist print support */
+.checklist-print-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+.checklist-print-btn{
+  border:0;
+  border-radius:9px;
+  padding:9px 13px;
+  background:#5C1856;
+  color:#fff;
+  font:inherit;
+  font-size:.78rem;
+  font-weight:800;
+  cursor:pointer;
+}
+.checklist-print-btn:hover{filter:brightness(.96)}
+.checklist-print-btn:focus-visible{
+  outline:3px solid rgba(92,24,86,.22);
+  outline-offset:2px;
+}
+#checklistPrintArea{display:none}
+@media print{
+  body.printing-checklist > *{
+    display:none!important;
+  }
+  body.printing-checklist #checklistPrintArea{
+    display:block!important;
+    position:static!important;
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:0!important;
+    color:#000!important;
+    background:#fff!important;
+  }
+  #checklistPrintArea .checklist-print-actions,
+  #checklistPrintArea summary::after{
+    display:none!important;
+  }
+  #checklistPrintArea details{
+    display:block!important;
+    border:0!important;
+    box-shadow:none!important;
+    background:#fff!important;
+  }
+  #checklistPrintArea details > summary{
+    display:block!important;
+    padding:0 0 12px!important;
+    border-bottom:1px solid #bbb!important;
+    background:#fff!important;
+    color:#000!important;
+  }
+  #checklistPrintArea .tool-body,
+  #checklistPrintArea .checklist-body{
+    display:block!important;
+    padding:10px 0!important;
+  }
+  #checklistPrintArea input[type="checkbox"]{
+    appearance:auto!important;
+    -webkit-appearance:checkbox!important;
+  }
+  #checklistPrintArea a{
+    color:#000!important;
+    text-decoration:none!important;
+  }
+}
+
+
+#checklistPrintArea{
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.45;
+}
+#checklistPrintArea > div:first-child{
+  padding-bottom:2px;
+}
+@media print{
+  @page{margin:16mm}
+  #checklistPrintArea h1{page-break-after:avoid}
+  #checklistPrintArea .check-row,
+  #checklistPrintArea label{page-break-inside:avoid}
+}
+
+
+.tool-field-hint{
+  display:block;
+  margin-top:5px;
+  color:#7b707b;
+  font-size:.7rem;
+  line-height:1.35;
+}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="container"><span>Academic Research • Scientific Writing • Statistics • Publication Support</span><a class="email-link" href="mailto:info@sailresearchsolutions.com?subject=Enquiry%20-%20SAIL%20Research%20Solutions" title="Email SAIL Research Solutions">info@sailresearchsolutions.com</a></div></div>
-<nav class="navbar"><div class="container nav-wrap"><a class="brand" href="index.html"><img class="brand-logo" src="assets/sail-logo-2026.png?v=20260901" alt="SAIL Research Solutions emblem"><span class="brand-name">SAIL Research Solutions<small>Scientific Advancement. Impactful Legacy.</small></span></a><button class="menu-btn" aria-label="Open menu">☰</button><div class="nav-links">
-      <a href="index.html">Home</a><a href="about.html">About</a><div class="nav-menu nav-menu-services">
-        <button class="nav-trigger" type="button" aria-expanded="false">Services <span class="nav-caret">⌄</span></button>
-        <div class="mega-menu service-mega-menu" role="menu">
-          <div class="mega-col mega-planning"><h4><span>🧭</span> Research Planning</h4>
-            <a href="services.html#research-topic-selection">Research Topic Selection</a><a href="services.html#research-gap-identification">Research Gap Identification</a><a href="services.html#research-proposal">Research Proposal</a><a href="services.html#synopsis">Synopsis</a><a href="services.html#research-protocol">Research Protocol</a><a href="services.html#research-methodology">Methodology</a><a href="services.html#sample-size">Sample Size</a><a href="services.html#data-collection-tools">Data Collection Tools</a>
-          </div>
-          <div class="mega-col mega-thesis"><h4><span>📘</span> Thesis & Dissertation</h4>
-            <a href="services.html#dissertation-planning">Dissertation Planning</a><a href="services.html#thesis-chapterization">Chapterization</a><a href="services.html#thesis-introduction">Introduction</a><a href="services.html#literature-review">Literature Review</a><a href="services.html#results-chapter">Results</a><a href="services.html#discussion">Discussion</a><a href="services.html#summary-conclusion">Summary & Conclusion</a><a href="services.html#thesis-formatting">Final Formatting</a>
-          </div>
-          <div class="mega-col mega-writing"><h4><span>✍️</span> Scientific Writing</h4>
-            <a href="services.html#original-article">Original Research Article</a><a href="services.html#narrative-review">Narrative Review</a><a href="services.html#systematic-review">Systematic / Scoping Review</a><a href="services.html#case-report">Case Report / Case Series</a><a href="services.html#conference-abstract">Conference Abstract</a><a href="services.html#scientific-summary">Scientific Summary</a>
-          </div>
-          <div class="mega-col mega-editing"><h4><span>📝</span> Editing & Refinement</h4>
-            <a href="services.html#manuscript-editing">Manuscript Editing</a><a href="services.html#thesis-editing">Thesis Editing</a><a href="services.html#proofreading">Proofreading</a><a href="services.html#academic-rewriting">Academic Rewriting</a><a href="services.html#reference-formatting">Reference Formatting</a><a href="services.html#similarity-interpretation">Similarity Interpretation</a>
-          </div>
-          <div class="mega-col mega-statistics"><h4><span>📊</span> Statistics & Data</h4>
-            <a href="services.html#dataset-preparation">Dataset Preparation</a><a href="services.html#descriptive-statistics">Descriptive Statistics</a><a href="services.html#inferential-statistics">Inferential Statistics</a><a href="services.html#correlation-regression">Correlation & Regression</a><a href="services.html#sample-size-power">Sample Size / Power</a><a href="services.html#tables-graphs">Tables & Graphs</a><a href="services.html#results-interpretation">Results Interpretation</a>
-          </div>
-          <div class="mega-col mega-publication"><h4><span>📚</span> Publication Support</h4>
-            <a href="services.html#journal-identification">Journal Identification</a><a href="services.html#journal-formatting">Journal Formatting</a><a href="services.html#cover-letter">Cover Letter</a><a href="services.html#submission-documents">Submission Documents</a><a href="services.html#reviewer-response">Reviewer Response</a><a href="services.html#revised-manuscript">Revised Manuscript</a><a href="services.html#graphical-abstract">Graphical Abstract</a>
-          </div>
-          <div class="mega-col mega-communication"><h4><span>🎤</span> Academic Communication</h4>
-            <a href="services.html#powerpoint">Scientific PowerPoint</a><a href="services.html#conference-poster">Conference Poster</a><a href="services.html#journal-club">Journal Club</a><a href="services.html#case-presentation">Case Presentation</a><a href="services.html#teaching-resources">Teaching Material</a>
-          </div>
-          <div class="mega-col mega-institutional"><h4><span>🏛️</span> Institutional Support</h4>
-            <a href="services.html#research-workshop">Research Workshops</a><a href="services.html#fdp-content">FDP Content</a><a href="services.html#research-documentation">Research Documentation</a><a href="services.html#publication-readiness">Publication Training</a><a href="services.html#institutional-support">Customized Support</a>
-          </div>
-          <div class="mega-footer"><a class="mega-all" href="services.html#service-directory">View complete service directory →</a></div>
-        </div>
-      </div><div class="nav-menu nav-menu-small">
-        <button class="nav-trigger" type="button" aria-expanded="false">Publication <span class="nav-caret">⌄</span></button>
-        <div class="mini-dropdown publication-dropdown">
-          <a href="publication.html#journal-identification"><span>🔎</span><div><b>Journal Identification</b><small>Scope, indexing and suitability</small></div></a>
-          <a href="publication.html#journal-formatting"><span>🧾</span><div><b>Journal Formatting</b><small>Guidelines, tables and references</small></div></a>
-          <a href="publication.html#submission-documents"><span>📤</span><div><b>Submission Documents</b><small>Cover letter, title page and checklist</small></div></a>
-          <a href="publication.html#graphical-abstract"><span>🎨</span><div><b>Graphical Abstract</b><small>Publication-oriented visual planning</small></div></a>
-          <a href="publication.html#reviewer-response"><span>💬</span><div><b>Reviewer Response</b><small>Revision and point-by-point response</small></div></a>
-        </div>
-      </div><div class="nav-menu nav-menu-small">
-        <button class="nav-trigger" type="button" aria-expanded="false">Resources <span class="nav-caret">⌄</span></button>
-        <div class="mini-dropdown resources-dropdown">
-          <a href="resources.html#methodology"><span>🧭</span><div><b>Research Methodology</b><small>Design, sampling and outcomes</small></div></a>
-          <a href="resources.html#writing"><span>✍️</span><div><b>Scientific Writing</b><small>Structure and academic communication</small></div></a>
-          <a href="resources.html#statistics"><span>📊</span><div><b>Statistics & Data</b><small>Analysis concepts and interpretation</small></div></a>
-          <a href="resources.html#publication"><span>📚</span><div><b>Publication</b><small>Journal readiness and submission</small></div></a>
-          <a href="resources.html#ethics"><span>⚖️</span><div><b>Research Ethics</b><small>Integrity and responsible conduct</small></div></a>
-          <a href="resources.html#communication"><span>🎤</span><div><b>Academic Communication</b><small>Presentations and scientific visuals</small></div></a>
-        </div>
-      </div><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
-    </div>
-    <div class="nav-actions"><a class="btn btn-outline" href="payment.html"><span class="btn-ico" aria-hidden="true">💳</span>Make Payment</a><a class="btn btn-primary" href="submit.html"><span class="btn-ico" aria-hidden="true">📨</span>Submit Requirement</a></div></div></nav>
-<main>
-<section class="page-hero"><div class="container"><span class="pill">Research Resources</span><h1>Practical research guidance, explained in detail.</h1><p>This resource centre is designed as a quick-reference learning area for students, postgraduate learners, faculty members and healthcare professionals. Open only the topic you need and review the detailed explanation, key considerations and practical checkpoints.</p></div></section>
-<section class="resource-directory"><div class="container">
-<div class="resource-card-grid">
-<a class="resource-card" href="#methodology"><span class="feature-icon">🧭</span><div><h3>Research Methodology</h3><p>Study design, objectives, variables, sampling, outcomes and bias.</p></div><span class="resource-arrow">→</span></a>
-<a class="resource-card" href="#writing"><span class="feature-icon">✍️</span><div><h3>Scientific Writing</h3><p>Thesis, manuscripts, abstracts, results and discussion writing.</p></div><span class="resource-arrow">→</span></a>
-<a class="resource-card" href="#statistics"><span class="feature-icon">📊</span><div><h3>Statistics & Data</h3><p>Test selection, p-values, confidence intervals, tables and graphs.</p></div><span class="resource-arrow">→</span></a>
-<a class="resource-card" href="#publication"><span class="feature-icon">📚</span><div><h3>Publication</h3><p>Journal selection, indexing, submission files and peer review.</p></div><span class="resource-arrow">→</span></a>
-<a class="resource-card" href="#ethics"><span class="feature-icon">⚖️</span><div><h3>Research Ethics</h3><p>Consent, authorship, plagiarism, data integrity and responsible conduct.</p></div><span class="resource-arrow">→</span></a>
-<a class="resource-card" href="#communication"><span class="feature-icon">🎤</span><div><h3>Academic Communication</h3><p>Presentations, posters, journal clubs and scientific visualisation.</p></div><span class="resource-arrow">→</span></a>
+<nav class="navbar"><div class="container nav-wrap"><a class="brand" href="index.html"><img alt="SAIL Research Solutions emblem" class="brand-logo" src="assets/sail-logo-2026.png?v=20260901"/><span class="brand-name">SAIL Research Solutions<small>Scientific Advancement. Impactful Legacy.</small></span></a><button aria-label="Open menu" class="menu-btn">☰</button><div class="nav-links">
+<a href="index.html">Home</a><a href="about.html">About</a><div class="nav-menu nav-menu-services">
+<button aria-expanded="false" class="nav-trigger" type="button">Services <span class="nav-caret">⌄</span></button>
+<div class="mega-menu service-mega-menu" role="menu">
+<div class="mega-col mega-planning"><h4><span>🧭</span> Research Planning</h4>
+<a href="services.html#research-topic-selection">Research Topic Selection</a><a href="services.html#research-gap-identification">Research Gap Identification</a><a href="services.html#research-proposal">Research Proposal</a><a href="services.html#synopsis">Synopsis</a><a href="services.html#research-protocol">Research Protocol</a><a href="services.html#research-methodology">Methodology</a><a href="services.html#sample-size">Sample Size</a><a href="services.html#data-collection-tools">Data Collection Tools</a>
 </div>
-
-<div id="methodology" class="resource-topic"><div class="resource-topic-head"><span class="feature-icon feature-icon-lg">🧭</span><div><span class="eyebrow">Research foundation</span><h2>Research Methodology</h2><p>Methodology connects the research question to the way evidence will be collected and interpreted. Good methodology is not simply a list of procedures; every design choice should be justified by the study objective.</p></div></div>
-<div class="accordion"><button>How should research objectives be written?<span data-symbol>+</span></button><div class="accordion-content"><p>Objectives should state exactly what the study intends to measure, compare, describe, determine or evaluate. They should be consistent with the research title, study design, variables and planned analysis.</p><ul><li>Use specific action verbs such as assess, compare, determine, evaluate or identify.</li><li>Avoid vague objectives such as “to know” or “to understand”.</li><li>Separate the primary objective from supporting secondary objectives.</li><li>Each important objective should have corresponding variables and an analysis plan.</li></ul><p><strong>Practical check:</strong> if you cannot identify what data are needed to answer an objective, the objective is probably too broad or unclear.</p></div></div>
-<div class="accordion"><button>What is a research gap and how is it identified?<span data-symbol>+</span></button><div class="accordion-content"><p>A research gap is a meaningful unanswered question, limitation, inconsistency or under-studied area within the existing evidence. A gap should emerge from critical reading rather than from simply stating that “few studies are available”.</p><ul><li>Look for inconsistent findings between previous studies.</li><li>Identify populations, outcomes or settings that have not been adequately studied.</li><li>Check whether earlier studies had important methodological limitations.</li><li>Distinguish between a genuine scientific gap and a merely local absence of data.</li></ul><p>A defensible gap should lead logically to the problem statement, research question and study objectives.</p></div></div>
-<div class="accordion"><button>How is an appropriate study design selected?<span data-symbol>+</span></button><div class="accordion-content"><p>Study design is selected according to the research question, whether an intervention is involved, the timing of measurements, availability of comparison groups and feasibility.</p><ul><li><strong>Cross-sectional:</strong> useful for prevalence, characteristics and associations measured at one period.</li><li><strong>Case-control:</strong> useful for comparing previous exposures between participants with and without an outcome.</li><li><strong>Cohort:</strong> useful for following exposed and unexposed groups over time.</li><li><strong>Experimental/interventional:</strong> used when the investigator assigns an intervention under an appropriate protocol.</li></ul><p>The most complex design is not automatically the best design. The correct design is the one that answers the objective with acceptable bias, ethics and feasibility.</p></div></div>
-<div class="accordion"><button>What should be considered while planning sample size?<span data-symbol>+</span></button><div class="accordion-content"><p>Sample size should be based on the primary outcome and the statistical question, not on an arbitrary target. The calculation may require expected prevalence, effect size, variability, confidence level, statistical power and group allocation.</p><ul><li>Define the primary outcome before calculating sample size.</li><li>Use assumptions supported by prior literature or pilot data where possible.</li><li>Allow for expected non-response, attrition or incomplete records.</li><li>Report the assumptions and method used so the calculation is reproducible.</li></ul></div></div>
-<div class="accordion"><button>How should variables and outcomes be defined?<span data-symbol>+</span></button><div class="accordion-content"><p>Every important variable should have an operational definition that explains exactly how it will be identified, measured, categorized or calculated. This improves consistency during data collection and reduces ambiguity during analysis.</p><ul><li>Define exposure/intervention variables, outcomes, predictors and potential confounders.</li><li>Specify units, cut-offs and scoring methods.</li><li>Use validated instruments where appropriate.</li><li>Distinguish primary outcomes from secondary or exploratory outcomes.</li></ul></div></div>
+<div class="mega-col mega-thesis"><h4><span>📘</span> Thesis &amp; Dissertation</h4>
+<a href="services.html#dissertation-planning">Dissertation Planning</a><a href="services.html#thesis-chapterization">Chapterization</a><a href="services.html#thesis-introduction">Introduction</a><a href="services.html#literature-review">Literature Review</a><a href="services.html#results-chapter">Results</a><a href="services.html#discussion">Discussion</a><a href="services.html#summary-conclusion">Summary &amp; Conclusion</a><a href="services.html#thesis-formatting">Final Formatting</a>
 </div>
-
-<div id="writing" class="resource-topic"><div class="resource-topic-head"><span class="feature-icon feature-icon-lg">✍️</span><div><span class="eyebrow">Scientific communication</span><h2>Scientific Writing</h2><p>Scientific writing should allow the reader to understand what was done, what was found and why the findings matter. Clarity and logical flow are more important than unnecessarily complex language.</p></div></div>
-<div class="accordion"><button>How should a scientific manuscript be structured?<span data-symbol>+</span></button><div class="accordion-content"><p>For most original research articles, the IMRaD structure—Introduction, Methods, Results and Discussion—provides the central organization, accompanied by title, abstract, references and required declarations.</p><ul><li><strong>Introduction:</strong> establishes context, research gap and objective.</li><li><strong>Methods:</strong> describes design, participants, measurements and analysis sufficiently for evaluation or replication.</li><li><strong>Results:</strong> reports findings without unnecessary interpretation.</li><li><strong>Discussion:</strong> interprets findings, compares evidence and addresses strengths and limitations.</li></ul></div></div>
-<div class="accordion"><button>How is the Results section different from the Discussion?<span data-symbol>+</span></button><div class="accordion-content"><p>The Results section answers “what did the study find?” whereas the Discussion answers “what do those findings mean?”. Mixing interpretation into the results can make a manuscript difficult to follow.</p><ul><li>Results should present objective-wise findings using concise text, tables and figures.</li><li>Avoid repeating every number from a table in the narrative.</li><li>Discussion should begin with the most important findings, not repeat the entire Results section.</li><li>Compare findings with relevant literature and explain plausible reasons for similarities or differences.</li></ul></div></div>
-<div class="accordion"><button>What makes a strong abstract?<span data-symbol>+</span></button><div class="accordion-content"><p>A strong abstract is a faithful miniature of the full work. It should contain enough information for a reader to understand the question, approach, major findings and conclusion without overstating the evidence.</p><ul><li>Follow the journal’s required structured or unstructured format.</li><li>Include actual key numerical findings when appropriate.</li><li>Do not introduce methods, results or conclusions that do not appear in the manuscript.</li><li>Avoid citations unless specifically allowed.</li></ul></div></div>
-<div class="accordion"><button>How should a thesis Discussion be developed?<span data-symbol>+</span></button><div class="accordion-content"><p>A thesis Discussion should be organized around the study objectives or major findings. Each major result should be interpreted, compared with previous evidence and placed in the context of the study design and population.</p><ul><li>State the important finding.</li><li>Explain its scientific or clinical interpretation.</li><li>Compare with supportive and contrasting studies.</li><li>Discuss plausible explanations and methodological considerations.</li><li>Address strengths, limitations and implications without making claims beyond the data.</li></ul></div></div>
+<div class="mega-col mega-writing"><h4><span>✍️</span> Scientific Writing</h4>
+<a href="services.html#original-article">Original Research Article</a><a href="services.html#narrative-review">Narrative Review</a><a href="services.html#systematic-review">Systematic / Scoping Review</a><a href="services.html#case-report">Case Report / Case Series</a><a href="services.html#conference-abstract">Conference Abstract</a><a href="services.html#scientific-summary">Scientific Summary</a>
 </div>
-
-<div id="statistics" class="resource-topic"><div class="resource-topic-head"><span class="feature-icon feature-icon-lg">📊</span><div><span class="eyebrow">Analysis and interpretation</span><h2>Statistics & Data</h2><p>Statistical analysis should be driven by the study objective and type of data. The goal is not to select the most sophisticated test, but to use methods that are appropriate, transparent and interpretable.</p></div></div>
-<div class="accordion"><button>How is the statistical test selected?<span data-symbol>+</span></button><div class="accordion-content"><p>Test selection depends on the research objective, outcome type, number of groups, independence or pairing of observations, distributional assumptions and whether adjustment for other variables is required.</p><ul><li>Continuous versus categorical outcome.</li><li>Two groups versus multiple groups.</li><li>Independent versus paired/repeated observations.</li><li>Normally distributed versus non-normal data where relevant.</li><li>Unadjusted comparison versus multivariable modelling.</li></ul></div></div>
-<div class="accordion"><button>What does a p-value mean?<span data-symbol>+</span></button><div class="accordion-content"><p>A p-value describes how compatible the observed data are with the null hypothesis under the assumptions of the statistical model. It does not measure the magnitude, clinical importance or probability that the hypothesis is true.</p><p>Interpret p-values together with effect sizes, confidence intervals, study design, sample size and clinical/scientific relevance. A very small difference can be statistically significant in a large sample yet have little practical importance.</p></div></div>
-<div class="accordion"><button>Why are confidence intervals important?<span data-symbol>+</span></button><div class="accordion-content"><p>A confidence interval provides a range of values compatible with the estimated effect under the statistical model and gives information about precision. Wide intervals usually indicate greater uncertainty.</p><ul><li>Report confidence intervals with effect estimates such as mean differences, odds ratios, relative risks or regression coefficients.</li><li>Do not rely only on whether the interval crosses a null value.</li><li>Consider whether the entire interval contains clinically important or unimportant effects.</li></ul></div></div>
-<div class="accordion"><button>How should tables and graphs be prepared?<span data-symbol>+</span></button><div class="accordion-content"><p>Tables and figures should reduce cognitive load and communicate a specific message. They should not merely decorate the report.</p><ul><li>Use clear titles and consistent units.</li><li>Avoid displaying the same information in both a table and graph without a reason.</li><li>Use appropriate denominators and clearly state missing data where relevant.</li><li>Keep decimal places and statistical notation consistent.</li><li>Choose graph types that match the variable and comparison being shown.</li></ul></div></div>
+<div class="mega-col mega-editing"><h4><span>📝</span> Editing &amp; Refinement</h4>
+<a href="services.html#manuscript-editing">Manuscript Editing</a><a href="services.html#thesis-editing">Thesis Editing</a><a href="services.html#proofreading">Proofreading</a><a href="services.html#academic-rewriting">Academic Rewriting</a><a href="services.html#reference-formatting">Reference Formatting</a><a href="services.html#similarity-interpretation">Similarity Interpretation</a>
 </div>
-
-<div id="publication" class="resource-topic"><div class="resource-topic-head"><span class="feature-icon feature-icon-lg">📚</span><div><span class="eyebrow">Journal readiness</span><h2>Publication</h2><p>Publication readiness involves more than formatting. The manuscript should fit the journal’s scope, article type, methodological expectations and submission requirements.</p></div></div>
-<div class="accordion"><button>How should a suitable journal be selected?<span data-symbol>+</span></button><div class="accordion-content"><p>Start with journal scope and readership. A highly ranked journal is not suitable if it rarely publishes the manuscript’s subject, methodology or article type.</p><ul><li>Check aims and scope and review recent related articles.</li><li>Confirm whether the journal accepts the intended article type.</li><li>Review indexing in databases relevant to your academic purpose.</li><li>Understand open-access or subscription models and legitimate publication charges.</li><li>Assess publication ethics and avoid journals displaying predatory characteristics.</li></ul></div></div>
-<div class="accordion"><button>What is the difference between indexing, impact metrics and quartiles?<span data-symbol>+</span></button><div class="accordion-content"><p>Indexing indicates inclusion in a bibliographic database, while journal metrics summarize citation-related performance using different calculation methods. Quartiles usually position journals within subject categories according to a particular database or metric.</p><p>These concepts should not be treated as interchangeable. Always verify the journal directly in the relevant database rather than relying only on claims displayed on a journal website.</p></div></div>
-<div class="accordion"><button>What documents are commonly required during submission?<span data-symbol>+</span></button><div class="accordion-content"><p>Requirements vary by journal, but a submission package may include the main manuscript, title page, cover letter, tables/figures, highlights, graphical abstract, supplementary files and declarations.</p><ul><li>Authorship and contribution statement.</li><li>Conflict-of-interest disclosure.</li><li>Funding information.</li><li>Ethics approval and consent statements where applicable.</li><li>Data availability statement where required.</li></ul></div></div>
-<div class="accordion"><button>How should reviewer comments be answered?<span data-symbol>+</span></button><div class="accordion-content"><p>Responses should be respectful, specific and point-by-point. Each reviewer comment should be quoted or clearly identified, followed by the response and location of the revision.</p><ul><li>Thank the reviewer for constructive points without excessive repetition.</li><li>State exactly what was changed and where.</li><li>If a suggestion is not adopted, explain the scientific or methodological reason.</li><li>Ensure that all changes described in the response are actually present in the revised manuscript.</li></ul></div></div>
+<div class="mega-col mega-statistics"><h4><span>📊</span> Statistics &amp; Data</h4>
+<a href="services.html#dataset-preparation">Dataset Preparation</a><a href="services.html#descriptive-statistics">Descriptive Statistics</a><a href="services.html#inferential-statistics">Inferential Statistics</a><a href="services.html#correlation-regression">Correlation &amp; Regression</a><a href="services.html#sample-size-power">Sample Size / Power</a><a href="services.html#tables-graphs">Tables &amp; Graphs</a><a href="services.html#results-interpretation">Results Interpretation</a>
 </div>
-
-<div id="ethics" class="resource-topic"><div class="resource-topic-head"><span class="feature-icon feature-icon-lg">⚖️</span><div><span class="eyebrow">Responsible conduct</span><h2>Research Ethics</h2><p>Ethical research protects participants, preserves scientific credibility and requires transparency in data handling, authorship and reporting.</p></div></div>
-<div class="accordion"><button>When is informed consent important?<span data-symbol>+</span></button><div class="accordion-content"><p>When human participants are involved, informed consent generally ensures that individuals understand the study purpose, procedures, possible risks/benefits, confidentiality and voluntary nature of participation. Exact requirements depend on the study and ethics approval.</p><p>Consent is a process, not merely a signature. Participant information should be understandable and coercion should be avoided.</p></div></div>
-<div class="accordion"><button>What constitutes responsible authorship?<span data-symbol>+</span></button><div class="accordion-content"><p>Authorship should reflect substantial intellectual contribution and accountability for the work. Gift, honorary or purchased authorship undermines research integrity.</p><ul><li>Discuss authorship criteria early.</li><li>Document contributions transparently.</li><li>Ensure all authors review and approve the submitted manuscript.</li><li>Acknowledge contributions that do not qualify for authorship appropriately.</li></ul></div></div>
-<div class="accordion"><button>What is plagiarism and how can it be avoided?<span data-symbol>+</span></button><div class="accordion-content"><p>Plagiarism involves presenting another person’s words, ideas or work without appropriate acknowledgement. Similarity software can help identify text overlap, but the numerical similarity percentage alone does not determine plagiarism.</p><ul><li>Paraphrase by genuinely rewriting the idea in your own scholarly expression.</li><li>Cite the original source for ideas and evidence.</li><li>Use quotation sparingly and according to academic conventions.</li><li>Do not manipulate text merely to reduce a similarity score.</li></ul></div></div>
-<div class="accordion"><button>Why is data integrity important?<span data-symbol>+</span></button><div class="accordion-content"><p>Research findings must reflect the data actually collected. Fabrication, falsification, selective deletion of inconvenient data or undocumented changes to outcomes can invalidate a study and create serious ethical problems.</p><ul><li>Maintain clear data dictionaries and audit trails.</li><li>Document cleaning rules and exclusions.</li><li>Preserve original/raw data according to applicable policies.</li><li>Report missing data and deviations transparently.</li></ul></div></div>
+<div class="mega-col mega-publication"><h4><span>📚</span> Publication Support</h4>
+<a href="services.html#journal-identification">Journal Identification</a><a href="services.html#journal-formatting">Journal Formatting</a><a href="services.html#cover-letter">Cover Letter</a><a href="services.html#submission-documents">Submission Documents</a><a href="services.html#reviewer-response">Reviewer Response</a><a href="services.html#revised-manuscript">Revised Manuscript</a><a href="services.html#graphical-abstract">Graphical Abstract</a>
 </div>
-
-<div id="communication" class="resource-topic"><div class="resource-topic-head"><span class="feature-icon feature-icon-lg">🎤</span><div><span class="eyebrow">Presenting research</span><h2>Academic Communication</h2><p>Scientific communication should help the audience understand the question, evidence and take-home message quickly. Visual structure is as important as the amount of information presented.</p></div></div>
-<div class="accordion"><button>How should a research PowerPoint be structured?<span data-symbol>+</span></button><div class="accordion-content"><p>A research presentation should tell a coherent story rather than reproduce a thesis on slides. Use short sections and make the main finding visually obvious.</p><ul><li>Title and context.</li><li>Research gap/objective.</li><li>Essential methodology.</li><li>Key results with readable tables/figures.</li><li>Interpretation, conclusion and implications.</li></ul><p>Keep slide text concise and reserve detailed explanation for the speaker.</p></div></div>
-<div class="accordion"><button>What makes an effective scientific poster?<span data-symbol>+</span></button><div class="accordion-content"><p>A poster should be readable from a reasonable distance and allow the viewer to understand the study in a few minutes. Use a clear visual hierarchy, concise text and well-labelled figures.</p><ul><li>Use a strong title and clear section order.</li><li>Prioritize key results rather than including every analysis.</li><li>Use sufficiently large fonts.</li><li>Maintain consistent alignment and spacing.</li><li>Avoid overcrowding with long paragraphs.</li></ul></div></div>
-<div class="accordion"><button>How should a journal club presentation be prepared?<span data-symbol>+</span></button><div class="accordion-content"><p>A journal club should move beyond summarizing the paper. It should evaluate the research question, methodology, validity, results, limitations and relevance.</p><ul><li>Identify the clinical/scientific question.</li><li>Explain the study design and population.</li><li>Highlight the most important numerical findings.</li><li>Critically assess bias and limitations.</li><li>Conclude with applicability and discussion points.</li></ul></div></div>
+<div class="mega-col mega-communication"><h4><span>🎤</span> Academic Communication</h4>
+<a href="services.html#powerpoint">Scientific PowerPoint</a><a href="services.html#conference-poster">Conference Poster</a><a href="services.html#journal-club">Journal Club</a><a href="services.html#case-presentation">Case Presentation</a><a href="services.html#teaching-resources">Teaching Material</a>
 </div>
-
-<div class="resources-cta"><div><span class="feature-icon">💡</span></div><div><h2>Need help applying one of these concepts?</h2><p>Use the resource section for learning and reference. If you need project-specific research support, submit the requirement with your current document, dataset or institutional guideline.</p></div><a class="btn btn-primary" href="submit.html"><span class="btn-ico" aria-hidden="true">📨</span>Submit Requirement</a></div>
-</div></section>
-</main>
-<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="brand footer-brand"><img class="brand-logo" src="assets/sail-logo-2026.png?v=20260901" alt="SAIL emblem"><span class="brand-name">SAIL Research Solutions<small>Scientific Advancement. Impactful Legacy.</small></span></div><p>Professional research, scientific writing, statistical analysis and publication support across health and biomedical sciences.</p></div><div><h4>Services</h4><a href="services.html#planning">Research Planning</a><a href="services.html#thesis">Thesis & Dissertation</a><a href="services.html#statistics">Statistics</a><a href="publication.html">Publication Support</a></div><div><h4>For Clients</h4><a href="submit.html">Submit Requirement</a><a href="payment.html">Make Payment</a><a href="resources.html">Research Resources</a><a href="faq.html">FAQ</a></div><div><h4>Legal</h4><a href="policies.html#integrity">Academic Integrity</a><a href="policies.html#privacy">Privacy</a><a href="policies.html#terms">Terms</a><a href="policies.html#refund">Refund Policy</a></div></div><div class="footer-bottom">© 2026 SAIL Research Solutions. All rights reserved. • FC4P+2QP, SH 15, Gobichettipalayam, Tamil Nadu 638476 • info@sailresearchsolutions.com</div></div></footer>
+<div class="mega-col mega-institutional"><h4><span>🏛️</span> Institutional Support</h4>
+<a href="services.html#research-workshop">Research Workshops</a><a href="services.html#fdp-content">FDP Content</a><a href="services.html#research-documentation">Research Documentation</a><a href="services.html#publication-readiness">Publication Training</a><a href="services.html#institutional-support">Customized Support</a>
+</div>
+<div class="mega-footer"><a class="mega-all" href="services.html#service-directory">View complete service directory →</a></div>
+</div>
+</div><div class="nav-menu nav-menu-small">
+<button aria-expanded="false" class="nav-trigger" type="button">Publication <span class="nav-caret">⌄</span></button>
+<div class="mini-dropdown publication-dropdown">
+<a href="publication.html#journal-identification"><span>🔎</span><div><b>Journal Identification</b><small>Scope, indexing and suitability</small></div></a>
+<a href="publication.html#journal-formatting"><span>🧾</span><div><b>Journal Formatting</b><small>Guidelines, tables and references</small></div></a>
+<a href="publication.html#submission-documents"><span>📤</span><div><b>Submission Documents</b><small>Cover letter, title page and checklist</small></div></a>
+<a href="publication.html#graphical-abstract"><span>🎨</span><div><b>Graphical Abstract</b><small>Publication-oriented visual planning</small></div></a>
+<a href="publication.html#reviewer-response"><span>💬</span><div><b>Reviewer Response</b><small>Revision and point-by-point response</small></div></a>
+</div>
+</div><div class="nav-menu nav-menu-small">
+<button aria-expanded="false" class="nav-trigger" type="button">Resources <span class="nav-caret">⌄</span></button>
+<div class="mini-dropdown resources-dropdown">
+<a href="resources.html#research-tools"><span>🧮</span><div><b>Research Tools</b><small>Interactive calculators, checklists and utilities</small></div></a>
+<a href="resources.html#methodology"><span>🧭</span><div><b>Research Methodology</b><small>Design, sampling and outcomes</small></div></a>
+<a href="resources.html#writing"><span>✍️</span><div><b>Scientific Writing</b><small>Structure and academic communication</small></div></a>
+<a href="resources.html#statistics"><span>📊</span><div><b>Statistics &amp; Data</b><small>Analysis concepts and interpretation</small></div></a>
+<a href="resources.html#publication"><span>📚</span><div><b>Publication</b><small>Journal readiness and submission</small></div></a>
+<a href="resources.html#ethics"><span>⚖️</span><div><b>Research Ethics</b><small>Integrity and responsible conduct</small></div></a>
+<a href="resources.html#communication"><span>🎤</span><div><b>Academic Communication</b><small>Presentations and scientific visuals</small></div></a>
+</div>
+</div><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+</div>
+<div class="nav-actions"><a class="btn btn-outline" href="payment.html"><span aria-hidden="true" class="btn-ico">💳</span>Make Payment</a><a class="btn btn-primary" href="submit.html"><span aria-hidden="true" class="btn-ico">📨</span>Submit Requirement</a></div></div></nav>
+<main><section class="page-hero"><div class="container"><span class="pill">Research Resources</span><h1>Research Tools and practical guidance.</h1><p>Select one Resources item from the dropdown. Only that selected section is displayed. Research Tools contains calculators, live checklists, PMID/DOI helpers and reference formatting.</p></div></section><section class="resource-directory"><div class="container"><div aria-label="Resource sections" class="resource-picker">
+<a data-resource-link="research-tools" href="#research-tools">Research Tools</a><a data-resource-link="methodology" href="#methodology">Research Methodology</a><a data-resource-link="writing" href="#writing">Scientific Writing</a><a data-resource-link="statistics" href="#statistics">Statistics &amp; Data</a><a data-resource-link="publication" href="#publication">Publication</a><a data-resource-link="ethics" href="#ethics">Research Ethics</a><a data-resource-link="communication" href="#communication">Academic Communication</a></div><section class="resource-topic resource-view" id="research-tools"><div class="resource-topic-head"><span class="feature-icon feature-icon-lg">🧮</span><div><span class="eyebrow">Interactive utilities</span><h2>Research Tools</h2><p>Open any tool below to calculate, check or format directly on this page. All calculator logic runs locally in the browser; literature helpers open authoritative external services.</p></div></div><div class="tool-searchbar tool-searchbar-single"><input id="toolSearch" placeholder="Search sample size, PRISMA, PMID, Vancouver, BMI…"/><div class="tool-search-hint">Browse by category below, or search for a calculator, checklist or utility.</div></div><div class="tool-category-list" id="toolCategories"><details class="tool-category" data-category-name="sample size &amp; study planning"><summary><span class="tool-category-icon">📐</span><span class="tool-category-text"><span class="tool-category-title">Sample Size &amp; Study Planning</span><span class="tool-category-sub">Plan prevalence and comparative studies.</span></span><span class="tool-category-count">2 tools</span></summary><div class="tool-category-body"><div class="tool-category-tools"><details class="tool-item" data-cat="Sample Size" data-group="Sample Size &amp; Study Planning" data-name="prevalence study sample size"><summary><span class="tool-emoji">📐</span><span><span class="tool-title">Prevalence Study Sample Size</span><span class="tool-sub">Single-proportion/prevalence sample size with non-response adjustment.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="prevalence"><div><label>Expected prevalence (%)</label><input max="99.99" min="0.01" name="p" step="0.01" type="number" value="50" inputmode="decimal"/><small class="tool-field-hint">Enter a percentage; decimal values such as 24.7 are accepted.</small></div><div><label>Margin of error (%)</label><input max="99.99" min="0.01" name="d" step="0.01" type="number" value="5" inputmode="decimal"/></div><div><label>Confidence level</label><select name="z"><option value="1.645">90%</option><option selected="" value="1.96">95%</option><option value="2.576">99%</option></select></div><div><label>Non-response (%)</label><input max="95" min="0" name="loss" step="0.01" type="number" value="0" inputmode="decimal"/></div><div class="full"><button class="tool-action" type="submit">Calculate sample size</button></div></form><div aria-live="polite" class="tool-result"></div></div></details><details class="tool-item" data-cat="Sample Size" data-group="Sample Size &amp; Study Planning" data-name="two-proportion sample size"><summary><span class="tool-emoji">📐</span><span><span class="tool-title">Two-Proportion Sample Size</span><span class="tool-sub">Approximate equal-group sample size for comparing two proportions.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="twoprop"><div><label>Proportion 1 (%)</label><input name="p1" type="number" value="20"/></div><div><label>Proportion 2 (%)</label><input name="p2" type="number" value="10"/></div><div><label>Power (%)</label><select name="power"><option>80</option><option>90</option><option>95</option></select></div><div><label>Alpha</label><select name="alpha"><option value="0.05">0.05</option><option value="0.01">0.01</option></select></div><div class="full"><button class="tool-action" type="submit">Calculate</button></div></form><div aria-live="polite" class="tool-result"></div></div></details></div></div></details><details class="tool-category" data-category-name="epidemiology &amp; risk measures"><summary><span class="tool-category-icon">📊</span><span class="tool-category-text"><span class="tool-category-title">Epidemiology &amp; Risk Measures</span><span class="tool-category-sub">Analyse exposure, treatment and outcome relationships.</span></span><span class="tool-category-count">1 tool</span></summary><div class="tool-category-body"><div class="tool-category-tools"><details class="tool-item" data-cat="Epidemiology" data-group="Epidemiology &amp; Risk Measures" data-name="2×2 epidemiology analyzer"><summary><span class="tool-emoji">📊</span><span><span class="tool-title">2×2 Epidemiology Analyzer</span><span class="tool-sub">Odds ratio, relative risk, risk difference and NNT/NNH.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="epi"><div><label>Exposed/Treatment outcome + (a)</label><input name="a" type="number" value="36"/></div><div><label>Exposed/Treatment outcome − (b)</label><input name="b" type="number" value="110"/></div><div><label>Control outcome + (c)</label><input name="c" type="number" value="18"/></div><div><label>Control outcome − (d)</label><input name="d" type="number" value="212"/></div><div class="full"><button class="tool-action" type="submit">Calculate OR, RR and NNT/NNH</button></div></form><div aria-live="polite" class="tool-result"></div></div></details></div></div></details><details class="tool-category" data-category-name="diagnostic research"><summary><span class="tool-category-icon">🧪</span><span class="tool-category-text"><span class="tool-category-title">Diagnostic Research</span><span class="tool-category-sub">Evaluate diagnostic-test performance.</span></span><span class="tool-category-count">1 tool</span></summary><div class="tool-category-body"><div class="tool-category-tools"><details class="tool-item" data-cat="Diagnostic" data-group="Diagnostic Research" data-name="diagnostic test analyzer"><summary><span class="tool-emoji">🧪</span><span><span class="tool-title">Diagnostic Test Analyzer</span><span class="tool-sub">Sensitivity, specificity, predictive values, LR+/LR− and accuracy.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="diag"><div><label>True positive</label><input name="tp" type="number" value="92"/></div><div><label>False positive</label><input name="fp" type="number" value="18"/></div><div><label>False negative</label><input name="fn" type="number" value="8"/></div><div><label>True negative</label><input name="tn" type="number" value="82"/></div><div class="full"><button class="tool-action" type="submit">Calculate diagnostic measures</button></div></form><div aria-live="polite" class="tool-result"></div></div></details></div></div></details><details class="tool-category" data-category-name="statistics &amp; effect size"><summary><span class="tool-category-icon">📈</span><span class="tool-category-text"><span class="tool-category-title">Statistics &amp; Effect Size</span><span class="tool-category-sub">Summarise data, estimate precision and quantify effects.</span></span><span class="tool-category-count">4 tools</span></summary><div class="tool-category-body"><div class="tool-category-tools"><details class="tool-item" data-cat="Statistics" data-group="Statistics &amp; Effect Size" data-name="descriptive statistics"><summary><span class="tool-emoji">📈</span><span><span class="tool-title">Descriptive Statistics</span><span class="tool-sub">Mean, median, SD, variance, SE, quartiles, IQR and CV.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="desc"><div class="full"><label>Numeric data (comma, space or line separated)</label><textarea name="data">12,14,18,22,13,19,21</textarea></div><div class="full"><button class="tool-action" type="submit">Analyse data</button></div></form><div aria-live="polite" class="tool-result"></div></div></details><details class="tool-item" data-cat="Statistics" data-group="Statistics &amp; Effect Size" data-name="confidence interval"><summary><span class="tool-emoji">🎯</span><span><span class="tool-title">Confidence Interval</span><span class="tool-sub">Calculate a normal-approximation confidence interval from estimate and SE.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="ci"><div><label>Estimate / mean</label><input name="est" type="number" value="50"/></div><div><label>Standard error</label><input name="se" type="number" value="2.5"/></div><div><label>Confidence level</label><select name="z"><option value="1.645">90%</option><option selected="" value="1.96">95%</option><option value="2.576">99%</option></select></div><div class="full"><button class="tool-action" type="submit">Calculate interval</button></div></form><div aria-live="polite" class="tool-result"></div></div></details><details class="tool-item" data-cat="Statistics" data-group="Statistics &amp; Effect Size" data-name="pearson correlation"><summary><span class="tool-emoji">🔗</span><span><span class="tool-title">Pearson Correlation</span><span class="tool-sub">Correlation coefficient for paired numeric observations.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="corr"><div><label>X values</label><textarea name="x">1,2,3,4,5</textarea></div><div><label>Y values</label><textarea name="y">2,4,4,8,10</textarea></div><div class="full"><button class="tool-action" type="submit">Calculate Pearson r</button></div></form><div aria-live="polite" class="tool-result"></div></div></details><details class="tool-item" data-cat="Effect Size" data-group="Statistics &amp; Effect Size" data-name="cohen's d"><summary><span class="tool-emoji">📏</span><span><span class="tool-title">Cohen's d</span><span class="tool-sub">Standardized mean difference using pooled SD.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="cohend"><div><label>Mean 1</label><input name="m1" type="number" value="20"/></div><div><label>Mean 2</label><input name="m2" type="number" value="15"/></div><div><label>SD 1</label><input name="s1" type="number" value="6"/></div><div><label>SD 2</label><input name="s2" type="number" value="5"/></div><div><label>n1</label><input name="n1" type="number" value="50"/></div><div><label>n2</label><input name="n2" type="number" value="50"/></div><div class="full"><button class="tool-action" type="submit">Calculate Cohen's d</button></div></form><div aria-live="polite" class="tool-result"></div></div></details></div></div></details><details class="tool-category" data-category-name="clinical &amp; pharmacy calculators"><summary><span class="tool-category-icon">💊</span><span class="tool-category-text"><span class="tool-category-title">Clinical &amp; Pharmacy Calculators</span><span class="tool-category-sub">Common clinical and pharmacy research calculations.</span></span><span class="tool-category-count">3 tools</span></summary><div class="tool-category-body"><div class="tool-category-tools"><details class="tool-item" data-cat="Clinical" data-group="Clinical &amp; Pharmacy Calculators" data-name="bmi &amp; body surface area"><summary><span class="tool-emoji">⚕️</span><span><span class="tool-title">BMI &amp; Body Surface Area</span><span class="tool-sub">BMI and Mosteller BSA from height and weight.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="bmi"><div><label>Weight (kg)</label><input name="w" type="number" value="70"/></div><div><label>Height (cm)</label><input name="h" type="number" value="170"/></div><div class="full"><button class="tool-action" type="submit">Calculate BMI and BSA</button></div></form><div aria-live="polite" class="tool-result"></div></div></details><details class="tool-item" data-cat="Clinical" data-group="Clinical &amp; Pharmacy Calculators" data-name="cockcroft–gault creatinine clearance"><summary><span class="tool-emoji">💊</span><span><span class="tool-title">Cockcroft–Gault Creatinine Clearance</span><span class="tool-sub">Estimated creatinine clearance using Cockcroft–Gault.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="crcl"><div><label>Age (years)</label><input name="age" type="number" value="65"/></div><div><label>Weight (kg)</label><input name="w" type="number" value="70"/></div><div><label>Serum creatinine (mg/dL)</label><input name="scr" step="0.1" type="number" value="1.2"/></div><div><label>Sex</label><select name="sex"><option value="m">Male</option><option value="f">Female</option></select></div><div class="full"><button class="tool-action" type="submit">Calculate CrCl</button></div></form><div aria-live="polite" class="tool-result"></div><div class="tool-note">Educational/research use. Confirm equation and weight selection for the intended clinical context.</div></div></details><details class="tool-item" data-cat="Clinical" data-group="Clinical &amp; Pharmacy Calculators" data-name="qtc calculator"><summary><span class="tool-emoji">❤️</span><span><span class="tool-title">QTc Calculator</span><span class="tool-sub">Bazett and Fridericia corrected QT interval.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="qtc"><div><label>QT interval (ms)</label><input name="qt" type="number" value="400"/></div><div><label>Heart rate (bpm)</label><input name="hr" type="number" value="75"/></div><div class="full"><button class="tool-action" type="submit">Calculate QTc</button></div></form><div aria-live="polite" class="tool-result"></div></div></details></div></div></details><details class="tool-category" data-category-name="research utilities"><summary><span class="tool-category-icon">🧭</span><span class="tool-category-text"><span class="tool-category-title">Research Utilities</span><span class="tool-category-sub">Dates, follow-up schedules, identifiers and study utilities.</span></span><span class="tool-category-count">3 tools</span></summary><div class="tool-category-body"><div class="tool-category-tools"><details class="tool-item" data-cat="Research Utility" data-group="Research Utilities" data-name="date difference &amp; follow-up scheduler"><summary><span class="tool-emoji">📅</span><span><span class="tool-title">Date Difference &amp; Follow-up Scheduler</span><span class="tool-sub">Study duration and follow-up dates from a baseline date.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="dates"><div><label>Start date</label><input name="start" type="date"/></div><div><label>End date</label><input name="end" type="date"/></div><div><label>Follow-up months</label><input name="months" value="1,3,6,12"/></div><div class="full"><button class="tool-action" type="submit">Calculate dates</button></div></form><div aria-live="polite" class="tool-result"></div></div></details><details class="tool-item" data-cat="Research Utility" data-group="Research Utilities" data-name="percentage change"><summary><span class="tool-emoji">％</span><span><span class="tool-title">Percentage Change</span><span class="tool-sub">Percentage change and percentage difference.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="pct"><div><label>Initial value</label><input name="a" type="number" value="100"/></div><div><label>Final value</label><input name="b" type="number" value="125"/></div><div class="full"><button class="tool-action" type="submit">Calculate change</button></div></form><div aria-live="polite" class="tool-result"></div></div></details><details class="tool-item" data-cat="Research Utility" data-group="Research Utilities" data-name="participant id generator"><summary><span class="tool-emoji">🆔</span><span><span class="tool-title">Participant ID Generator</span><span class="tool-sub">Generate sequential participant identifiers.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="ids"><div><label>Prefix</label><input name="prefix" value="P"/></div><div><label>Count</label><input max="500" min="1" name="count" type="number" value="20"/></div><div class="full"><button class="tool-action" type="submit">Generate IDs</button></div></form><div aria-live="polite" class="tool-result"></div></div></details></div></div></details><details class="tool-category" data-category-name="manuscript &amp; writing"><summary><span class="tool-category-icon">✍️</span><span class="tool-category-text"><span class="tool-category-title">Manuscript &amp; Writing</span><span class="tool-category-sub">Quick manuscript and text utilities.</span></span><span class="tool-category-count">1 tool</span></summary><div class="tool-category-body"><div class="tool-category-tools"><details class="tool-item" data-cat="Writing" data-group="Manuscript &amp; Writing" data-name="manuscript word / character counter"><summary><span class="tool-emoji">✍️</span><span><span class="tool-title">Manuscript Word / Character Counter</span><span class="tool-sub">Word, character, sentence and approximate reading-time counts.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="text"><div class="full"><label>Paste manuscript text</label><textarea name="text"></textarea></div><div class="full"><button class="tool-action" type="submit">Analyse text</button></div></form><div aria-live="polite" class="tool-result"></div></div></details></div></div></details><details class="tool-category" data-category-name="references &amp; literature"><summary><span class="tool-category-icon">📚</span><span class="tool-category-text"><span class="tool-category-title">References &amp; Literature</span><span class="tool-category-sub">Format references and open literature/identifier searches.</span></span><span class="tool-category-count">2 tools</span></summary><div class="tool-category-body"><div class="tool-category-tools"><details class="tool-item" data-cat="References" data-group="References &amp; Literature" data-name="reference formatter"><summary><span class="tool-emoji">📚</span><span><span class="tool-title">Reference Formatter</span><span class="tool-sub">Vancouver, AMA, APA, Harvard, NLM, IEEE and other common styles.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="ref"><div><label>Style</label><select name="style"><option>Vancouver</option><option>AMA</option><option>APA</option><option>Harvard</option><option>NLM</option><option>IEEE</option><option>Chicago Author-Date</option><option>MLA</option><option>ACS</option></select></div><div><label>Year</label><input name="year" value="2026"/></div><div class="full"><label>Authors (semicolon separated)</label><input name="authors" placeholder="Lewis I, Smith A"/></div><div class="full"><label>Article title</label><input name="title"/></div><div><label>Journal</label><input name="journal"/></div><div><label>Volume</label><input name="vol"/></div><div><label>Issue</label><input name="issue"/></div><div><label>Pages / article number</label><input name="pages"/></div><div class="full"><label>DOI</label><input name="doi"/></div><div class="full"><button class="tool-action" type="submit">Format reference</button></div></form><div aria-live="polite" class="tool-result"></div></div></details><details class="tool-item" data-cat="Literature" data-group="References &amp; Literature" data-name="pmid / doi / literature helper"><summary><span class="tool-emoji">🔎</span><span><span class="tool-title">PMID / DOI / Literature Helper</span><span class="tool-sub">Open authoritative PubMed, DOI, Crossref, ClinicalTrials.gov or CTRI searches.</span></span></summary><div class="tool-panel"><form class="tool-form" data-calc="literature"><div class="full"><label>PMID, DOI, article title or keywords</label><input name="q" placeholder="e.g. 12345678 or 10.xxxx/xxxxx"/></div><div><label>Open with</label><select name="service"><option value="pubmed">PubMed / PMID</option><option value="doi">DOI Resolver</option><option value="crossref">Crossref Search</option><option value="clinicaltrials">ClinicalTrials.gov</option><option value="ctri">CTRI</option></select></div><div class="full"><button class="tool-action" type="submit">Open authoritative resource</button></div></form><div aria-live="polite" class="tool-result"></div></div></details></div></div></details><details class="tool-category" data-category-name="reporting checklists"><summary><span class="tool-category-icon">📋</span><span class="tool-category-text"><span class="tool-category-title">Reporting Checklists</span><span class="tool-category-sub">Interactive reporting checklists for common study designs.</span></span><span class="tool-category-count">4 tools</span></summary><div class="tool-category-body"><div class="tool-category-tools"><details class="tool-item" data-cat="Checklist" data-group="Reporting Checklists" data-name="prisma checklist"><summary><span class="tool-emoji">📋</span><span><span class="tool-title">PRISMA Checklist</span><span class="tool-sub">Live reporting checklist with completion progress.</span></span></summary><div class="tool-panel"><div class="checklist-box" data-checklist=""><strong>Completion: <span class="check-pct">0%</span></strong><div class="checklist-progress"><span></span></div><label class="check-row"><input type="checkbox"/><span>Identify the report as a systematic review.</span></label><label class="check-row"><input type="checkbox"/><span>Use a structured abstract.</span></label><label class="check-row"><input type="checkbox"/><span>State rationale and objectives.</span></label><label class="check-row"><input type="checkbox"/><span>Specify eligibility criteria.</span></label><label class="check-row"><input type="checkbox"/><span>List information sources and search dates.</span></label><label class="check-row"><input type="checkbox"/><span>Provide the full search strategy.</span></label><label class="check-row"><input type="checkbox"/><span>Describe study-selection and data-collection methods.</span></label><label class="check-row"><input type="checkbox"/><span>Define outcomes and data items.</span></label><label class="check-row"><input type="checkbox"/><span>Describe risk-of-bias assessment.</span></label><label class="check-row"><input type="checkbox"/><span>Describe synthesis methods.</span></label><label class="check-row"><input type="checkbox"/><span>Report study-selection results.</span></label><label class="check-row"><input type="checkbox"/><span>Describe included studies.</span></label><label class="check-row"><input type="checkbox"/><span>Report risk-of-bias results.</span></label><label class="check-row"><input type="checkbox"/><span>Report synthesis results.</span></label><label class="check-row"><input type="checkbox"/><span>Discuss limitations and implications.</span></label><label class="check-row"><input type="checkbox"/><span>Report registration, protocol, support and competing interests.</span></label><div class="external-actions"><button class="tool-action secondary" data-reset-checklist="" type="button">Reset</button></div><div class="tool-note">Verify the current official guideline and relevant extension before manuscript submission.</div></div></div><div class="checklist-print-actions"><button class="checklist-print-btn" data-print-checklist="true" type="button">🖨️ Print Checklist</button></div></details><details class="tool-item" data-cat="Checklist" data-group="Reporting Checklists" data-name="strobe checklist"><summary><span class="tool-emoji">📋</span><span><span class="tool-title">STROBE Checklist</span><span class="tool-sub">Live reporting checklist with completion progress.</span></span></summary><div class="tool-panel"><div class="checklist-box" data-checklist=""><strong>Completion: <span class="check-pct">0%</span></strong><div class="checklist-progress"><span></span></div><label class="check-row"><input type="checkbox"/><span>Identify the observational study design in title or abstract.</span></label><label class="check-row"><input type="checkbox"/><span>Explain background and rationale.</span></label><label class="check-row"><input type="checkbox"/><span>State objectives or hypotheses.</span></label><label class="check-row"><input type="checkbox"/><span>Describe study design, setting and dates.</span></label><label class="check-row"><input type="checkbox"/><span>Describe participants and eligibility.</span></label><label class="check-row"><input type="checkbox"/><span>Define variables and outcomes.</span></label><label class="check-row"><input type="checkbox"/><span>Describe data sources and measurement.</span></label><label class="check-row"><input type="checkbox"/><span>Address bias and study size.</span></label><label class="check-row"><input type="checkbox"/><span>Describe statistical methods.</span></label><label class="check-row"><input type="checkbox"/><span>Report participant numbers and descriptive data.</span></label><label class="check-row"><input type="checkbox"/><span>Report outcome data and main results with precision.</span></label><label class="check-row"><input type="checkbox"/><span>Report additional analyses.</span></label><label class="check-row"><input type="checkbox"/><span>Discuss limitations and generalisability.</span></label><label class="check-row"><input type="checkbox"/><span>State funding.</span></label><div class="external-actions"><button class="tool-action secondary" data-reset-checklist="" type="button">Reset</button></div><div class="tool-note">Verify the current official guideline and relevant extension before manuscript submission.</div></div></div><div class="checklist-print-actions"><button class="checklist-print-btn" data-print-checklist="true" type="button">🖨️ Print Checklist</button></div></details><details class="tool-item" data-cat="Checklist" data-group="Reporting Checklists" data-name="consort checklist"><summary><span class="tool-emoji">📋</span><span><span class="tool-title">CONSORT Checklist</span><span class="tool-sub">Live reporting checklist with completion progress.</span></span></summary><div class="tool-panel"><div class="checklist-box" data-checklist=""><strong>Completion: <span class="check-pct">0%</span></strong><div class="checklist-progress"><span></span></div><label class="check-row"><input type="checkbox"/><span>Identify the report as a randomized trial.</span></label><label class="check-row"><input type="checkbox"/><span>Provide a structured summary.</span></label><label class="check-row"><input type="checkbox"/><span>Describe trial design, participants and interventions.</span></label><label class="check-row"><input type="checkbox"/><span>Define outcomes and sample-size determination.</span></label><label class="check-row"><input type="checkbox"/><span>Describe random sequence and allocation concealment.</span></label><label class="check-row"><input type="checkbox"/><span>Describe blinding where applicable.</span></label><label class="check-row"><input type="checkbox"/><span>Describe statistical methods.</span></label><label class="check-row"><input type="checkbox"/><span>Report participant flow and baseline data.</span></label><label class="check-row"><input type="checkbox"/><span>Report outcomes and effect estimates.</span></label><label class="check-row"><input type="checkbox"/><span>Report harms.</span></label><label class="check-row"><input type="checkbox"/><span>Discuss limitations and generalisability.</span></label><label class="check-row"><input type="checkbox"/><span>Provide registration, protocol and funding.</span></label><div class="external-actions"><button class="tool-action secondary" data-reset-checklist="" type="button">Reset</button></div><div class="tool-note">Verify the current official guideline and relevant extension before manuscript submission.</div></div></div><div class="checklist-print-actions"><button class="checklist-print-btn" data-print-checklist="true" type="button">🖨️ Print Checklist</button></div></details><details class="tool-item" data-cat="Checklist" data-group="Reporting Checklists" data-name="care checklist"><summary><span class="tool-emoji">📋</span><span><span class="tool-title">CARE Checklist</span><span class="tool-sub">Live reporting checklist with completion progress.</span></span></summary><div class="tool-panel"><div class="checklist-box" data-checklist=""><strong>Completion: <span class="check-pct">0%</span></strong><div class="checklist-progress"><span></span></div><label class="check-row"><input type="checkbox"/><span>Identify the work as a case report.</span></label><label class="check-row"><input type="checkbox"/><span>Summarize the case in the abstract.</span></label><label class="check-row"><input type="checkbox"/><span>Provide relevant patient information.</span></label><label class="check-row"><input type="checkbox"/><span>Describe clinical findings and timeline.</span></label><label class="check-row"><input type="checkbox"/><span>Describe diagnostic assessment.</span></label><label class="check-row"><input type="checkbox"/><span>Describe intervention.</span></label><label class="check-row"><input type="checkbox"/><span>Describe follow-up and outcomes.</span></label><label class="check-row"><input type="checkbox"/><span>Discuss strengths, limitations and literature.</span></label><label class="check-row"><input type="checkbox"/><span>Include patient perspective where appropriate.</span></label><label class="check-row"><input type="checkbox"/><span>Document informed consent where required.</span></label><div class="external-actions"><button class="tool-action secondary" data-reset-checklist="" type="button">Reset</button></div><div class="tool-note">Verify the current official guideline and relevant extension before manuscript submission.</div></div></div><div class="checklist-print-actions"><button class="checklist-print-btn" data-print-checklist="true" type="button">🖨️ Print Checklist</button></div></details></div></div></details></div></section><div class="resource-topic resource-view" id="methodology"><div class="resource-topic-head"><span class="feature-icon feature-icon-lg">🧭</span><div><span class="eyebrow">Research foundation</span><h2>Research Methodology</h2><p>Methodology connects the research question to the way evidence will be collected and interpreted. Good methodology is not simply a list of procedures; every design choice should be justified by the study objective.</p></div></div>
+<details class="resource-native-detail"><summary>How should research objectives be written?</summary><div class="resource-native-detail-body"><p>Objectives should state exactly what the study intends to measure, compare, describe, determine or evaluate. They should be consistent with the research title, study design, variables and planned analysis.</p><ul><li>Use specific action verbs such as assess, compare, determine, evaluate or identify.</li><li>Avoid vague objectives such as “to know” or “to understand”.</li><li>Separate the primary objective from supporting secondary objectives.</li><li>Each important objective should have corresponding variables and an analysis plan.</li></ul><p><strong>Practical check:</strong> if you cannot identify what data are needed to answer an objective, the objective is probably too broad or unclear.</p></div></details>
+<details class="resource-native-detail"><summary>What is a research gap and how is it identified?</summary><div class="resource-native-detail-body"><p>A research gap is a meaningful unanswered question, limitation, inconsistency or under-studied area within the existing evidence. A gap should emerge from critical reading rather than from simply stating that “few studies are available”.</p><ul><li>Look for inconsistent findings between previous studies.</li><li>Identify populations, outcomes or settings that have not been adequately studied.</li><li>Check whether earlier studies had important methodological limitations.</li><li>Distinguish between a genuine scientific gap and a merely local absence of data.</li></ul><p>A defensible gap should lead logically to the problem statement, research question and study objectives.</p></div></details>
+<details class="resource-native-detail"><summary>How is an appropriate study design selected?</summary><div class="resource-native-detail-body"><p>Study design is selected according to the research question, whether an intervention is involved, the timing of measurements, availability of comparison groups and feasibility.</p><ul><li><strong>Cross-sectional:</strong> useful for prevalence, characteristics and associations measured at one period.</li><li><strong>Case-control:</strong> useful for comparing previous exposures between participants with and without an outcome.</li><li><strong>Cohort:</strong> useful for following exposed and unexposed groups over time.</li><li><strong>Experimental/interventional:</strong> used when the investigator assigns an intervention under an appropriate protocol.</li></ul><p>The most complex design is not automatically the best design. The correct design is the one that answers the objective with acceptable bias, ethics and feasibility.</p></div></details>
+<details class="resource-native-detail"><summary>What should be considered while planning sample size?</summary><div class="resource-native-detail-body"><p>Sample size should be based on the primary outcome and the statistical question, not on an arbitrary target. The calculation may require expected prevalence, effect size, variability, confidence level, statistical power and group allocation.</p><ul><li>Define the primary outcome before calculating sample size.</li><li>Use assumptions supported by prior literature or pilot data where possible.</li><li>Allow for expected non-response, attrition or incomplete records.</li><li>Report the assumptions and method used so the calculation is reproducible.</li></ul></div></details>
+<details class="resource-native-detail"><summary>How should variables and outcomes be defined?</summary><div class="resource-native-detail-body"><p>Every important variable should have an operational definition that explains exactly how it will be identified, measured, categorized or calculated. This improves consistency during data collection and reduces ambiguity during analysis.</p><ul><li>Define exposure/intervention variables, outcomes, predictors and potential confounders.</li><li>Specify units, cut-offs and scoring methods.</li><li>Use validated instruments where appropriate.</li><li>Distinguish primary outcomes from secondary or exploratory outcomes.</li></ul></div></details>
+</div>
+<div class="resource-topic resource-view" id="writing"><div class="resource-topic-head"><span class="feature-icon feature-icon-lg">✍️</span><div><span class="eyebrow">Scientific communication</span><h2>Scientific Writing</h2><p>Scientific writing should allow the reader to understand what was done, what was found and why the findings matter. Clarity and logical flow are more important than unnecessarily complex language.</p></div></div>
+<details class="resource-native-detail"><summary>How should a scientific manuscript be structured?</summary><div class="resource-native-detail-body"><p>For most original research articles, the IMRaD structure—Introduction, Methods, Results and Discussion—provides the central organization, accompanied by title, abstract, references and required declarations.</p><ul><li><strong>Introduction:</strong> establishes context, research gap and objective.</li><li><strong>Methods:</strong> describes design, participants, measurements and analysis sufficiently for evaluation or replication.</li><li><strong>Results:</strong> reports findings without unnecessary interpretation.</li><li><strong>Discussion:</strong> interprets findings, compares evidence and addresses strengths and limitations.</li></ul></div></details>
+<details class="resource-native-detail"><summary>How is the Results section different from the Discussion?</summary><div class="resource-native-detail-body"><p>The Results section answers “what did the study find?” whereas the Discussion answers “what do those findings mean?”. Mixing interpretation into the results can make a manuscript difficult to follow.</p><ul><li>Results should present objective-wise findings using concise text, tables and figures.</li><li>Avoid repeating every number from a table in the narrative.</li><li>Discussion should begin with the most important findings, not repeat the entire Results section.</li><li>Compare findings with relevant literature and explain plausible reasons for similarities or differences.</li></ul></div></details>
+<details class="resource-native-detail"><summary>What makes a strong abstract?</summary><div class="resource-native-detail-body"><p>A strong abstract is a faithful miniature of the full work. It should contain enough information for a reader to understand the question, approach, major findings and conclusion without overstating the evidence.</p><ul><li>Follow the journal’s required structured or unstructured format.</li><li>Include actual key numerical findings when appropriate.</li><li>Do not introduce methods, results or conclusions that do not appear in the manuscript.</li><li>Avoid citations unless specifically allowed.</li></ul></div></details>
+<details class="resource-native-detail"><summary>How should a thesis Discussion be developed?</summary><div class="resource-native-detail-body"><p>A thesis Discussion should be organized around the study objectives or major findings. Each major result should be interpreted, compared with previous evidence and placed in the context of the study design and population.</p><ul><li>State the important finding.</li><li>Explain its scientific or clinical interpretation.</li><li>Compare with supportive and contrasting studies.</li><li>Discuss plausible explanations and methodological considerations.</li><li>Address strengths, limitations and implications without making claims beyond the data.</li></ul></div></details>
+</div>
+<div class="resource-topic resource-view" id="statistics"><div class="resource-topic-head"><span class="feature-icon feature-icon-lg">📊</span><div><span class="eyebrow">Analysis and interpretation</span><h2>Statistics &amp; Data</h2><p>Statistical analysis should be driven by the study objective and type of data. The goal is not to select the most sophisticated test, but to use methods that are appropriate, transparent and interpretable.</p></div></div>
+<details class="resource-native-detail"><summary>How is the statistical test selected?</summary><div class="resource-native-detail-body"><p>Test selection depends on the research objective, outcome type, number of groups, independence or pairing of observations, distributional assumptions and whether adjustment for other variables is required.</p><ul><li>Continuous versus categorical outcome.</li><li>Two groups versus multiple groups.</li><li>Independent versus paired/repeated observations.</li><li>Normally distributed versus non-normal data where relevant.</li><li>Unadjusted comparison versus multivariable modelling.</li></ul></div></details>
+<details class="resource-native-detail"><summary>What does a p-value mean?</summary><div class="resource-native-detail-body"><p>A p-value describes how compatible the observed data are with the null hypothesis under the assumptions of the statistical model. It does not measure the magnitude, clinical importance or probability that the hypothesis is true.</p><p>Interpret p-values together with effect sizes, confidence intervals, study design, sample size and clinical/scientific relevance. A very small difference can be statistically significant in a large sample yet have little practical importance.</p></div></details>
+<details class="resource-native-detail"><summary>Why are confidence intervals important?</summary><div class="resource-native-detail-body"><p>A confidence interval provides a range of values compatible with the estimated effect under the statistical model and gives information about precision. Wide intervals usually indicate greater uncertainty.</p><ul><li>Report confidence intervals with effect estimates such as mean differences, odds ratios, relative risks or regression coefficients.</li><li>Do not rely only on whether the interval crosses a null value.</li><li>Consider whether the entire interval contains clinically important or unimportant effects.</li></ul></div></details>
+<details class="resource-native-detail"><summary>How should tables and graphs be prepared?</summary><div class="resource-native-detail-body"><p>Tables and figures should reduce cognitive load and communicate a specific message. They should not merely decorate the report.</p><ul><li>Use clear titles and consistent units.</li><li>Avoid displaying the same information in both a table and graph without a reason.</li><li>Use appropriate denominators and clearly state missing data where relevant.</li><li>Keep decimal places and statistical notation consistent.</li><li>Choose graph types that match the variable and comparison being shown.</li></ul></div></details>
+</div>
+<div class="resource-topic resource-view" id="publication"><div class="resource-topic-head"><span class="feature-icon feature-icon-lg">📚</span><div><span class="eyebrow">Journal readiness</span><h2>Publication</h2><p>Publication readiness involves more than formatting. The manuscript should fit the journal’s scope, article type, methodological expectations and submission requirements.</p></div></div>
+<details class="resource-native-detail"><summary>How should a suitable journal be selected?</summary><div class="resource-native-detail-body"><p>Start with journal scope and readership. A highly ranked journal is not suitable if it rarely publishes the manuscript’s subject, methodology or article type.</p><ul><li>Check aims and scope and review recent related articles.</li><li>Confirm whether the journal accepts the intended article type.</li><li>Review indexing in databases relevant to your academic purpose.</li><li>Understand open-access or subscription models and legitimate publication charges.</li><li>Assess publication ethics and avoid journals displaying predatory characteristics.</li></ul></div></details>
+<details class="resource-native-detail"><summary>What is the difference between indexing, impact metrics and quartiles?</summary><div class="resource-native-detail-body"><p>Indexing indicates inclusion in a bibliographic database, while journal metrics summarize citation-related performance using different calculation methods. Quartiles usually position journals within subject categories according to a particular database or metric.</p><p>These concepts should not be treated as interchangeable. Always verify the journal directly in the relevant database rather than relying only on claims displayed on a journal website.</p></div></details>
+<details class="resource-native-detail"><summary>What documents are commonly required during submission?</summary><div class="resource-native-detail-body"><p>Requirements vary by journal, but a submission package may include the main manuscript, title page, cover letter, tables/figures, highlights, graphical abstract, supplementary files and declarations.</p><ul><li>Authorship and contribution statement.</li><li>Conflict-of-interest disclosure.</li><li>Funding information.</li><li>Ethics approval and consent statements where applicable.</li><li>Data availability statement where required.</li></ul></div></details>
+<details class="resource-native-detail"><summary>How should reviewer comments be answered?</summary><div class="resource-native-detail-body"><p>Responses should be respectful, specific and point-by-point. Each reviewer comment should be quoted or clearly identified, followed by the response and location of the revision.</p><ul><li>Thank the reviewer for constructive points without excessive repetition.</li><li>State exactly what was changed and where.</li><li>If a suggestion is not adopted, explain the scientific or methodological reason.</li><li>Ensure that all changes described in the response are actually present in the revised manuscript.</li></ul></div></details>
+</div>
+<div class="resource-topic resource-view" id="ethics"><div class="resource-topic-head"><span class="feature-icon feature-icon-lg">⚖️</span><div><span class="eyebrow">Responsible conduct</span><h2>Research Ethics</h2><p>Ethical research protects participants, preserves scientific credibility and requires transparency in data handling, authorship and reporting.</p></div></div>
+<details class="resource-native-detail"><summary>When is informed consent important?</summary><div class="resource-native-detail-body"><p>When human participants are involved, informed consent generally ensures that individuals understand the study purpose, procedures, possible risks/benefits, confidentiality and voluntary nature of participation. Exact requirements depend on the study and ethics approval.</p><p>Consent is a process, not merely a signature. Participant information should be understandable and coercion should be avoided.</p></div></details>
+<details class="resource-native-detail"><summary>What constitutes responsible authorship?</summary><div class="resource-native-detail-body"><p>Authorship should reflect substantial intellectual contribution and accountability for the work. Gift, honorary or purchased authorship undermines research integrity.</p><ul><li>Discuss authorship criteria early.</li><li>Document contributions transparently.</li><li>Ensure all authors review and approve the submitted manuscript.</li><li>Acknowledge contributions that do not qualify for authorship appropriately.</li></ul></div></details>
+<details class="resource-native-detail"><summary>What is plagiarism and how can it be avoided?</summary><div class="resource-native-detail-body"><p>Plagiarism involves presenting another person’s words, ideas or work without appropriate acknowledgement. Similarity software can help identify text overlap, but the numerical similarity percentage alone does not determine plagiarism.</p><ul><li>Paraphrase by genuinely rewriting the idea in your own scholarly expression.</li><li>Cite the original source for ideas and evidence.</li><li>Use quotation sparingly and according to academic conventions.</li><li>Do not manipulate text merely to reduce a similarity score.</li></ul></div></details>
+<details class="resource-native-detail"><summary>Why is data integrity important?</summary><div class="resource-native-detail-body"><p>Research findings must reflect the data actually collected. Fabrication, falsification, selective deletion of inconvenient data or undocumented changes to outcomes can invalidate a study and create serious ethical problems.</p><ul><li>Maintain clear data dictionaries and audit trails.</li><li>Document cleaning rules and exclusions.</li><li>Preserve original/raw data according to applicable policies.</li><li>Report missing data and deviations transparently.</li></ul></div></details>
+</div>
+<div class="resource-topic resource-view" id="communication"><div class="resource-topic-head"><span class="feature-icon feature-icon-lg">🎤</span><div><span class="eyebrow">Presenting research</span><h2>Academic Communication</h2><p>Scientific communication should help the audience understand the question, evidence and take-home message quickly. Visual structure is as important as the amount of information presented.</p></div></div>
+<details class="resource-native-detail"><summary>How should a research PowerPoint be structured?</summary><div class="resource-native-detail-body"><p>A research presentation should tell a coherent story rather than reproduce a thesis on slides. Use short sections and make the main finding visually obvious.</p><ul><li>Title and context.</li><li>Research gap/objective.</li><li>Essential methodology.</li><li>Key results with readable tables/figures.</li><li>Interpretation, conclusion and implications.</li></ul><p>Keep slide text concise and reserve detailed explanation for the speaker.</p></div></details>
+<details class="resource-native-detail"><summary>What makes an effective scientific poster?</summary><div class="resource-native-detail-body"><p>A poster should be readable from a reasonable distance and allow the viewer to understand the study in a few minutes. Use a clear visual hierarchy, concise text and well-labelled figures.</p><ul><li>Use a strong title and clear section order.</li><li>Prioritize key results rather than including every analysis.</li><li>Use sufficiently large fonts.</li><li>Maintain consistent alignment and spacing.</li><li>Avoid overcrowding with long paragraphs.</li></ul></div></details>
+<details class="resource-native-detail"><summary>How should a journal club presentation be prepared?</summary><div class="resource-native-detail-body"><p>A journal club should move beyond summarizing the paper. It should evaluate the research question, methodology, validity, results, limitations and relevance.</p><ul><li>Identify the clinical/scientific question.</li><li>Explain the study design and population.</li><li>Highlight the most important numerical findings.</li><li>Critically assess bias and limitations.</li><li>Conclude with applicability and discussion points.</li></ul></div></details>
+</div>
+</div></section></main><footer class="footer"><div class="container"><div class="footer-grid"><div><div class="brand footer-brand"><img alt="SAIL emblem" class="brand-logo" src="assets/sail-logo-2026.png?v=20260901"/><span class="brand-name">SAIL Research Solutions<small>Scientific Advancement. Impactful Legacy.</small></span></div><p>Professional research, scientific writing, statistical analysis and publication support across health and biomedical sciences.</p></div><div><h4>Services</h4><a href="services.html#planning">Research Planning</a><a href="services.html#thesis">Thesis &amp; Dissertation</a><a href="services.html#statistics">Statistics</a><a href="publication.html">Publication Support</a></div><div><h4>For Clients</h4><a href="submit.html">Submit Requirement</a><a href="payment.html">Make Payment</a><a href="resources.html">Research Resources</a><a href="faq.html">FAQ</a></div><div><h4>Legal</h4><a href="policies.html#integrity">Academic Integrity</a><a href="policies.html#privacy">Privacy</a><a href="policies.html#terms">Terms</a><a href="policies.html#refund">Refund Policy</a></div></div><div class="footer-bottom">© 2026 SAIL Research Solutions. All rights reserved. • FC4P+2QP, SH 15, Gobichettipalayam, Tamil Nadu 638476 • info@sailresearchsolutions.com</div></div></footer>
 <script src="assets/config.js"></script><script src="assets/site.js"></script>
+<script id="resources-inline-app">
+(function(){
+  'use strict';
+  const valid=['research-tools','methodology','writing','statistics','publication','ethics','communication'];
+  const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
+  const num=(form,name)=>Number(form.elements[name].value);
+  const numbers=s=>String(s).split(/[\s,;]+/).map(Number).filter(Number.isFinite);
+  const mean=a=>a.reduce((x,y)=>x+y,0)/a.length;
+  const variance=a=>{if(a.length<2)return 0;const m=mean(a);return a.reduce((s,x)=>s+(x-m)**2,0)/(a.length-1)};
+  const sd=a=>Math.sqrt(variance(a));
+  const qtile=(a,q)=>{const b=[...a].sort((x,y)=>x-y),p=(b.length-1)*q,i=Math.floor(p),r=p-i;return b[i+1]!==undefined?b[i]+r*(b[i+1]-b[i]):b[i]};
+  const fmt=(x,d=3)=>Number.isFinite(x)?x.toFixed(d):'Not defined';
+  function result(form,text){const box=form.parentElement.querySelector('.tool-result');box.innerHTML='<pre>'+text.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))+'</pre>';box.classList.add('show')}
+  function showSection(){let id=(location.hash||'#research-tools').slice(1);if(!valid.includes(id))id='research-tools';document.body.classList.add('resource-filter');$$('.resource-view').forEach(x=>x.classList.toggle('active',x.id===id));$$('[data-resource-link]').forEach(a=>a.classList.toggle('current',a.dataset.resourceLink===id));const el=document.getElementById(id);if(el)setTimeout(()=>window.scrollTo({top:Math.max(0,el.getBoundingClientRect().top+window.scrollY-110),behavior:'auto'}),0)}
+  window.addEventListener('hashchange',showSection);showSection();
+
+  function filterTools(){
+    const q=$('#toolSearch').value.trim().toLowerCase();
+
+    $$('.tool-category').forEach(category=>{
+      let matches=0;
+      $$('.tool-item',category).forEach(tool=>{
+        const hay=(tool.dataset.name+' '+tool.dataset.cat+' '+(tool.dataset.group||'')).toLowerCase();
+        const ok=!q||hay.includes(q);
+        tool.hidden=!ok;
+        if(ok) matches++;
+        if(!ok) tool.open=false;
+      });
+
+      category.hidden=matches===0;
+
+      if(q && matches>0){
+        category.open=true;
+      }else if(!q){
+        category.open=false;
+        $$('.tool-item',category).forEach(tool=>tool.open=false);
+      }
+    });
+  }
+
+  $('#toolSearch').addEventListener('input',filterTools);
+
+  /* Keep tool expansion visually independent:
+     one open tool becomes full-width within its category. */
+  $$('.tool-item').forEach(tool=>{
+    tool.addEventListener('toggle',function(){
+      if(!tool.open) return;
+      const category=tool.closest('.tool-category');
+      if(!category) return;
+      $$('.tool-item',category).forEach(other=>{
+        if(other!==tool) other.open=false;
+      });
+    });
+  });
+
+
+  document.addEventListener('submit',function(e){
+    const f=e.target.closest('form[data-calc]');if(!f)return;e.preventDefault();const k=f.dataset.calc;
+    try{
+      if(k==='prevalence'){
+        const pPct=num(f,'p');
+        const dPct=num(f,'d');
+        const z=num(f,'z');
+        const lossPct=num(f,'loss');
+
+        if(!Number.isFinite(pPct)||pPct<=0||pPct>=100)
+          throw Error('Expected prevalence must be greater than 0% and less than 100%.');
+        if(!Number.isFinite(dPct)||dPct<=0||dPct>=100)
+          throw Error('Margin of error must be greater than 0% and less than 100%.');
+        if(!Number.isFinite(z)||z<=0)
+          throw Error('Select a valid confidence level.');
+        if(!Number.isFinite(lossPct)||lossPct<0||lossPct>=100)
+          throw Error('Non-response must be between 0% and less than 100%.');
+
+        const p=pPct/100;
+        const d=dPct/100;
+        const loss=lossPct/100;
+
+        const base=(z*z*p*(1-p))/(d*d);
+        const adjusted=base/(1-loss);
+
+        result(
+          f,
+          'Required sample size: '+Math.ceil(adjusted)+
+          '\nBase sample size: '+fmt(base,2)+
+          (lossPct>0?'\nAfter '+fmt(lossPct,2)+'% non-response adjustment: '+fmt(adjusted,2):'')+
+          '\nFormula: n = Z² × p × (1 − p) / d²'
+        );
+      }
+      else if(k==='twoprop'){const p1=num(f,'p1')/100,p2=num(f,'p2')/100,p=(p1+p2)/2,za=num(f,'alpha')===0.01?2.576:1.96,pow=num(f,'power'),zb=pow>=95?1.645:pow>=90?1.282:.842;if(p1===p2)throw Error('The two proportions must differ.');const n=((za*Math.sqrt(2*p*(1-p))+zb*Math.sqrt(p1*(1-p1)+p2*(1-p2)))**2)/((p1-p2)**2);result(f,'Approximate sample per group: '+Math.ceil(n)+'\nApproximate total: '+(2*Math.ceil(n)));}
+      else if(k==='epi'){const a=num(f,'a'),b=num(f,'b'),c=num(f,'c'),d=num(f,'d');if([a,b,c,d].some(x=>x<0)||(a+b)<=0||(c+d)<=0)throw Error('Enter valid non-negative cell counts.');const r1=a/(a+b),r0=c/(c+d),rr=r1/r0,rd=r1-r0,or=(a*d)/(b*c),nnt=rd?1/Math.abs(rd):NaN;result(f,'Risk treatment/exposed: '+fmt(r1*100,2)+'%\nRisk control/unexposed: '+fmt(r0*100,2)+'%\nOdds ratio: '+fmt(or)+'\nRelative risk: '+fmt(rr)+'\nRisk difference: '+fmt(rd*100,2)+' percentage points\nNNT/NNH magnitude: '+(Number.isFinite(nnt)?Math.ceil(nnt):'Not defined'));}
+      else if(k==='diag'){const tp=num(f,'tp'),fp=num(f,'fp'),fn=num(f,'fn'),tn=num(f,'tn'),sens=tp/(tp+fn),spec=tn/(tn+fp),ppv=tp/(tp+fp),npv=tn/(tn+fn),acc=(tp+tn)/(tp+fp+fn+tn),lrp=sens/(1-spec),lrn=(1-sens)/spec;result(f,'Sensitivity: '+fmt(sens*100,2)+'%\nSpecificity: '+fmt(spec*100,2)+'%\nPPV: '+fmt(ppv*100,2)+'%\nNPV: '+fmt(npv*100,2)+'%\nAccuracy: '+fmt(acc*100,2)+'%\nLR+: '+fmt(lrp)+'\nLR−: '+fmt(lrn));}
+      else if(k==='desc'){const a=numbers(f.elements.data.value);if(!a.length)throw Error('Enter numeric data.');const m=mean(a),s=sd(a),q1=qtile(a,.25),q3=qtile(a,.75);result(f,'n: '+a.length+'\nMean: '+fmt(m,4)+'\nMedian: '+fmt(qtile(a,.5),4)+'\nSD: '+fmt(s,4)+'\nVariance: '+fmt(variance(a),4)+'\nSE: '+fmt(s/Math.sqrt(a.length),4)+'\nMin: '+Math.min(...a)+'\nMax: '+Math.max(...a)+'\nQ1: '+fmt(q1,4)+'\nQ3: '+fmt(q3,4)+'\nIQR: '+fmt(q3-q1,4)+'\nCV: '+(m?fmt(s/m*100,2)+'%':'Not defined'));}
+      else if(k==='ci'){const est=num(f,'est'),se=num(f,'se'),z=num(f,'z');result(f,'Estimate: '+fmt(est,4)+'\nLower: '+fmt(est-z*se,4)+'\nUpper: '+fmt(est+z*se,4));}
+      else if(k==='corr'){const x=numbers(f.elements.x.value),y=numbers(f.elements.y.value);if(x.length!==y.length||x.length<3)throw Error('Enter paired X and Y data with equal lengths.');const mx=mean(x),my=mean(y);let n=0,dx=0,dy=0;for(let i=0;i<x.length;i++){n+=(x[i]-mx)*(y[i]-my);dx+=(x[i]-mx)**2;dy+=(y[i]-my)**2}result(f,'Pearson r: '+fmt(n/Math.sqrt(dx*dy),4)+'\nn: '+x.length);}
+      else if(k==='cohend'){const m1=num(f,'m1'),m2=num(f,'m2'),s1=num(f,'s1'),s2=num(f,'s2'),n1=num(f,'n1'),n2=num(f,'n2');const sp=Math.sqrt(((n1-1)*s1*s1+(n2-1)*s2*s2)/(n1+n2-2));result(f,"Cohen's d: "+fmt((m1-m2)/sp,4)+'\nPooled SD: '+fmt(sp,4));}
+      else if(k==='bmi'){const w=num(f,'w'),h=num(f,'h');if(!(w>0&&h>0))throw Error('Enter valid height and weight.');result(f,'BMI: '+fmt(w/(h/100)**2,2)+' kg/m²\nBSA (Mosteller): '+fmt(Math.sqrt(w*h/3600),3)+' m²');}
+      else if(k==='crcl'){let c=((140-num(f,'age'))*num(f,'w'))/(72*num(f,'scr'));if(f.elements.sex.value==='f')c*=.85;result(f,'Estimated CrCl: '+fmt(c,1)+' mL/min\nCockcroft–Gault equation.');}
+      else if(k==='qtc'){const qt=num(f,'qt'),hr=num(f,'hr'),rr=60/hr;result(f,'QTc Bazett: '+fmt(qt/Math.sqrt(rr),1)+' ms\nQTc Fridericia: '+fmt(qt/Math.cbrt(rr),1)+' ms');}
+      else if(k==='dates'){const s=f.elements.start.value,e2=f.elements.end.value;if(!s)throw Error('Choose a start date.');const start=new Date(s+'T00:00:00Z');let out='Start: '+start.toISOString().slice(0,10);if(e2){const end=new Date(e2+'T00:00:00Z');out+='\nDifference: '+Math.round((end-start)/86400000)+' days';}numbers(f.elements.months.value).forEach(m=>{const d=new Date(start);d.setUTCMonth(d.getUTCMonth()+Math.round(m));out+='\n'+m+' month'+(m===1?'':'s')+': '+d.toISOString().slice(0,10)});result(f,out);}
+      else if(k==='pct'){const a=num(f,'a'),b=num(f,'b');result(f,'Percentage change: '+fmt((b-a)/a*100,2)+'%\nPercentage difference: '+fmt(Math.abs(a-b)/((a+b)/2)*100,2)+'%');}
+      else if(k==='ids'){const p=f.elements.prefix.value||'P',n=Math.max(1,Math.min(500,num(f,'count')));result(f,Array.from({length:n},(_,i)=>p+String(i+1).padStart(3,'0')).join('\n'));}
+      else if(k==='text'){const s=f.elements.text.value.trim(),w=s?s.split(/\s+/).length:0,ch=s.length,sen=s?(s.match(/[.!?]+(?:\s|$)/g)||[]).length:0;result(f,'Words: '+w+'\nCharacters: '+ch+'\nSentences (approx.): '+sen+'\nReading time: '+Math.max(1,Math.round(w/200))+' min');}
+      else if(k==='ref'){const s=f.elements.style.value,A=f.elements.authors.value.trim(),T=f.elements.title.value.trim(),J=f.elements.journal.value.trim(),Y=f.elements.year.value.trim(),V=f.elements.vol.value.trim(),I=f.elements.issue.value.trim(),P=f.elements.pages.value.trim(),D=f.elements.doi.value.trim().replace(/^https?:\/\/doi\.org\//,'');let r='';if(s==='APA')r=A.replace(/;/g,',')+' ('+Y+'). '+T+'. '+J+', '+V+(I?'('+I+')':'')+(P?', '+P:'')+'.'+(D?' https://doi.org/'+D:'');else if(s==='Harvard'||s==='Chicago Author-Date')r=A.replace(/;/g,', ')+' ('+Y+") '"+T+"', "+J+', '+V+(I?'('+I+')':'')+(P?', pp. '+P:'')+'.'+(D?' doi:'+D:'');else if(s==='IEEE')r=A.replace(/;/g,', ')+', “'+T+'”, '+J+', vol. '+V+(I?', no. '+I:'')+(P?', pp. '+P:'')+', '+Y+'.'+(D?' doi: '+D:'');else if(s==='MLA')r=A.replace(/;/g,', ')+'. “'+T+'.” '+J+', vol. '+V+(I?', no. '+I:'')+', '+Y+(P?', pp. '+P:'')+'.'+(D?' https://doi.org/'+D:'');else r=A.replace(/;/g,', ')+'. '+T+'. '+J+'. '+Y+';'+V+(I?'('+I+')':'')+(P?':'+P:'')+'.'+(D?' doi:'+D:'');result(f,r);}
+      else if(k==='literature'){const q=f.elements.q.value.trim(),svc=f.elements.service.value;if(!q)throw Error('Enter a PMID, DOI, title or search term.');let u='';if(svc==='pubmed')u=/^\d+$/.test(q)?'https://pubmed.ncbi.nlm.nih.gov/'+encodeURIComponent(q)+'/':'https://pubmed.ncbi.nlm.nih.gov/?term='+encodeURIComponent(q);else if(svc==='doi')u='https://doi.org/'+encodeURIComponent(q.replace(/^https?:\/\/doi\.org\//,''));else if(svc==='crossref')u='https://search.crossref.org/?q='+encodeURIComponent(q);else if(svc==='clinicaltrials')u='https://clinicaltrials.gov/search?term='+encodeURIComponent(q);else u='https://ctri.nic.in/Clinicaltrials/advancesearchmain.php';window.open(u,'_blank','noopener');result(f,'Opened:\n'+u);}
+    }catch(err){result(f,err.message||'Unable to calculate. Check the inputs.');}
+  });
+
+  document.addEventListener('change',function(e){const box=e.target.closest('[data-checklist]');if(!box||e.target.type!=='checkbox')return;const all=$$('input[type=checkbox]',box),done=all.filter(x=>x.checked).length,p=all.length?Math.round(done/all.length*100):0;$('.check-pct',box).textContent=p+'%';$('.checklist-progress span',box).style.width=p+'%'});
+  document.addEventListener('click',function(e){const b=e.target.closest('[data-reset-checklist]');if(!b)return;const box=b.closest('[data-checklist]');$$('input[type=checkbox]',box).forEach(x=>x.checked=false);$('.check-pct',box).textContent='0%';$('.checklist-progress span',box).style.width='0%'});
+})();
+
+
+  /* Print only the selected checklist */
+  document.addEventListener('click',function(e){
+    const btn=e.target.closest('[data-print-checklist]');
+    if(!btn) return;
+
+    const checklist=btn.closest('details.tool-item');
+    if(!checklist) return;
+
+    const clone=checklist.cloneNode(true);
+    clone.open=true;
+    clone.querySelectorAll('.checklist-print-actions').forEach(el=>el.remove());
+
+    const checked=clone.querySelectorAll('input[type="checkbox"]:checked').length;
+    const total=clone.querySelectorAll('input[type="checkbox"]').length;
+    const percentage=total?Math.round((checked/total)*100):0;
+    const summary=clone.querySelector('summary');
+    const title=summary?summary.textContent.trim():'Reporting Checklist';
+
+    const area=document.createElement('div');
+    area.id='checklistPrintArea';
+
+    const header=document.createElement('div');
+    header.style.marginBottom='16px';
+    header.innerHTML=
+      '<div style="font-size:12px;font-weight:700;letter-spacing:.04em;margin-bottom:5px;">SAIL Research Solutions</div>'+
+      '<div style="font-size:18px;font-weight:800;margin-bottom:3px;">Research Tools &amp; Resources</div>'+
+      '<div style="font-size:13px;font-weight:700;margin-bottom:12px;">Reporting Checklist</div>'+
+      '<h1 style="font-size:22px;margin:0 0 10px;">'+title+'</h1>'+
+      '<div style="font-size:13px;margin-bottom:4px;">Completion: <strong>'+checked+' / '+total+
+      ' ('+percentage+'%)</strong></div>'+
+      '<div style="font-size:11px;">Printed on: '+
+      new Date().toLocaleString()+'</div>'+
+      '<hr style="border:0;border-top:1px solid #bbb;margin:14px 0 16px;">';
+
+    area.appendChild(header);
+    area.appendChild(clone);
+    document.body.appendChild(area);
+    document.body.classList.add('printing-checklist');
+
+    const cleanup=function(){
+      document.body.classList.remove('printing-checklist');
+      const current=document.getElementById('checklistPrintArea');
+      if(current) current.remove();
+      window.removeEventListener('afterprint',cleanup);
+    };
+
+    window.addEventListener('afterprint',cleanup);
+    window.print();
+    setTimeout(function(){
+      if(document.body.classList.contains('printing-checklist')) cleanup();
+    },2000);
+  });
+
+</script>
 </body></html>
